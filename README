@@ -1,0 +1,5 @@
+graphviz docu:
+https://graphviz.org/documentation/
+
+.dot -> .pdf:
+dot -Tpdf filename.dot -o filename.pdf

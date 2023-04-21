@@ -1,0 +1,52 @@
+// graph {
+//   layout="patchwork"
+//   node [style=filled]
+//   "5c"  [area=  5 fillcolor=blue]
+//   "10c" [area= 10 fillcolor=green]
+//   "20c" [area= 20 fillcolor=red]
+//   "50c" [area= 50 fillcolor=white]
+//   "$1"  [area=30 fillcolor=gold]
+//   "$2"  [area=200 fillcolor=gold]
+// }
+
+
+
+digraph G {
+    // node [style=filled]
+    // layout = "sfdp"
+    // beautify = false
+
+
+    //pour parametrer la flêche il faut utiliser les crochets [] APRÈS un lien
+
+
+    a [label="a", shape="square", color="blue", area="1.0"]
+	a -> b
+	c -> d [arrowhead="open"] //normal, inv, dot, invdot, odot, invodot, none, tee, empty, invempty, diamond, odiamond, ediamond, crow, box, obox, open, halfopen, vee
+    e -> f [arrowsize="3"] //multiplie la taille de la tête
+    g -> h [arrowtail="diamond"]
+
+
+    1 -> 2
+    2 -> 3
+    3 -> 1
+
+    // N0 -> {N1; N2; N3; N4; N5; N6}
+
+    // v -> w[color="green", label=5]
+    // x -> y[area="3.0"]
+}
+
+
+// digraph G {
+//     splines="FALSE";
+
+//     /* Entities */
+//     shortName [label="shortName", shape="square"]
+    
+//     /* Relationships */
+//     F1 -> shortName[label=".63"]
+
+//     /* Ranks */
+//     { rank=same; shortName; };
+// }

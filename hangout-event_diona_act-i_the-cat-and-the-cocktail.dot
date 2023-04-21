@@ -1,0 +1,511 @@
+
+digraph G {
+    node [style=filled]
+    // landscape=true
+    // node [color=blue]
+    // node [label="***"] //censure lol
+    node [shape=rect]
+    rankdir=LR
+
+
+
+
+
+    //links
+
+    "TALK TO\nNIMROD" -> "The Cat's\nTails ?" [xlabel=1]
+
+    "The Cat's\nTails ?" -> "Is the Cat's\nTails still open\nright now ?" [xlabel=5]
+    "The Cat's\nTails ?" -> "I'd like to go\ncheck it out" [xlabel=5]
+
+    "Is the Cat's\nTails still open\nright now ?" -> "TALK TO\nDIONA 1" [xlabel=7]
+    "I'd like to go\ncheck it out" -> "TALK TO\nDIONA 1" [xlabel=7]
+
+    "TALK TO\nDIONA 1" -> "Aww look,\nit's a kitty." [xlabel=5]
+
+    "Aww look,\nit's a kitty." -> "I'm here for\nthe kitties..." [xlabel=2]
+    "Aww look,\nit's a kitty." -> "I want to try\nsome new\nspecialty drinks..." [xlabel=2]
+
+    "I'm here for\nthe kitties..." -> "Maybe everyone\njust thinks the\ncats are cute" [xlabel=4]
+    "Maybe everyone\njust thinks the\ncats are cute" -> "I understand" [xlabel=11]
+    "I understand" -> "TALK TO\nDIONA 2" [xlabel=5]
+    "TALK TO\nDIONA 2" -> "Then how do\nwe find them?" [xlabel=1]
+    "Then how do\nwe find them?" -> "Seems like you\nknow him really well." [xlabel=3]
+    "Seems like you\nknow him really well." -> "FOLLOW\nDIONA 1" [xlabel=2]
+    "FOLLOW\nDIONA 1" -> "Maybe he just\nneeds someone\nto plays with?" [xlabel=9]
+    "Maybe he just\nneeds someone\nto plays with?" -> "FOLLOW\nDIONA 2" [xlabel=3]
+    "FOLLOW\nDIONA 2" -> "You think\ncat food\nwill do\nthe trick?" [xlabel=6]
+
+    "You think\ncat food\nwill do\nthe trick?" -> "I'm an\nexperienced\nclimber." [xlabel=5]
+    "You think\ncat food\nwill do\nthe trick?" -> "I climb all\nthe time,\nit won't\nbe a problem"  [xlabel=5]
+
+    "I'm an\nexperienced\nclimber." -> "FIND THE CAT 1" [xlabel=1]
+    "I climb all\nthe time,\nit won't\nbe a problem" -> "FIND THE CAT 1"  [xlabel=1]
+
+    "FIND THE CAT 1" -> key1start [xlabel=4]
+    key1start -> "Use the\ncat toy. 1"
+    key1start -> "Use the\ncat food. 1"
+
+    "Use the\ncat toy. 1" -> dot1 [xlabel="4", arrowhead=none]
+
+    "Use the\ncat food. 1" -> "Let use the\ncat toy then..." [xlabel=1]
+    "Use the\ncat food. 1" -> "Let's use the\ncat food anyway." [xlabel=1]
+
+    "Let use the\ncat toy then..." -> dot1 [xlabel=4, arrowhead=none]
+    "Let's use the\ncat food anyway." -> dot1 [xlabel=6, arrowhead=none]
+
+
+    "Well, he is\nreally cute\nafter all" -> "FIND THE CAT 2" [xlabel=4]
+    "I think the\ncustomers visit\nthe tavern primarily\nfor your cocktails" -> "FIND THE CAT 2" [xlabel=3]
+
+    "FIND THE CAT 2" -> "Use the\ncat food. 2" [xlabel=2]
+    "FIND THE CAT 2" -> "Use the\ncat toy. 2" [xlabel=2]
+
+    "Use the\ncat food. 2" -> dot13 [xlabel="5", arrowhead=none]
+
+    "Use the\ncat toy. 2" -> "Let's use\nthe cat food\nthen." [xlabel=1]
+    "Use the\ncat toy. 2" -> "Let's use\nthe cat toy\nanyway." [xlabel=1]
+
+    "Let's use\nthe cat food\nthen." -> dot13 [xlabel="5", arrowhead=none]
+
+    "Let's use\nthe cat toy\nanyway." -> dot13 [xlabel=9, arrowhead=none]
+
+    "Maybe you should take\na hint from him and\ndo what he does?" -> dot14 [xlabel=3, arrowhead=none]
+
+    "Does he like\ncat toys?" -> "FIND THE CAT 3" [xlabel="1"]
+
+    "Does he like\ncat food?" -> "FIND THE CAT 3" [xlabel=1]
+    "FIND THE CAT 3" -> "So what\nshould we\ndo now?" [xlabel=1]
+
+    "So what\nshould we\ndo now?" -> "Meow, Meow..." [xlabel=5]
+    "So what\nshould we\ndo now?" -> "Alright,\nI'll leave\nhim to you." [xlabel=5]
+
+    "Meow, Meow..." -> dot15 [xlabel="8", arrowhead=none]
+
+    "Alright,\nI'll leave\nhim to you." -> dot15 [xlabel=6, arrowhead=none]
+
+    "That actually\nmight make\nmore money..." -> key1end [xlabel=2, arrowhead=none]
+    key1end -> "Why don't\nwe just go\nback together?"
+
+    "Why don't\nwe just go\nback together?" -> "The\nUnfathomable\nFalines" [xlabel=2]
+
+    "No more would\nknow about these\ncats if it\nweren't for your\nspecialty drinks." -> key1end [xlabel="2", arrowhead=none]
+    key1end -> "Return to\nThe\nCat's Tail"
+
+    "Return to\nThe\nCat's Tail" -> "Diona does fit\nthe theme of\nthe tavern nicely." [xlabel=2]
+    "Diona does fit\nthe theme of\nthe tavern nicely." -> "Quite the\ngrand plan you\nhave there..." [xlabel=7]
+
+    "Quite the\ngrand plan you\nhave there..." -> "Why didn't you\njust go to\nAngel's Share\nto work instead?" [xlabel=1]
+    "Quite the\ngrand plan you\nhave there..." -> "But, everyone\nseems to really\nlike the drinks\nyou make" [xlabel=1]
+
+    "Why didn't you\njust go to\nAngel's Share\nto work instead?" -> "Cat\nParty" [xlabel=5]
+
+    "But, everyone\nseems to really\nlike the drinks\nyou make" -> "Cat\nParty" [xlabel="5"]
+
+    "Your specialty\ndrinks attract lots\nof attention already." -> dot14 [xlabel="3", arrowhead=none]
+
+    "I want to try\nsome new\nspecialty drinks..." -> "I'm a lot older\nthan I look" [xlabel=2]
+    "I want to try\nsome new\nspecialty drinks..." -> "A non-alcoholic\nbeverage would\nbe fine as well." [xlabel=2]
+
+    "I'm a lot older\nthan I look" -> dot11 [xlabel="11", arrowhead=none]
+
+    "A non-alcoholic\nbeverage would\nbe fine as well." -> dot11 [xlabel="11", arrowhead=none]
+
+    "I'd like the\nbase to be\nmore unique..." -> "TALK TO\nDIONA 5" [xlabel="2"]
+
+    "TALK TO\nDIONA 5" -> "You want to\nmake a drink...\nfrom that?" [xlabel="8"]
+    "TALK TO\nDIONA 5" -> "Maybe we can\nuse something\nelse instead?" [xlabel="8"]
+
+    "You want to\nmake a drink...\nfrom that?" -> "GO TO\nDADAUPA\nGORGE 1" [xlabel="4"]
+    "GO TO\nDADAUPA\nGORGE 1" -> "TALK TO\nTHE PERSON" [xlabel="0"]
+    "TALK TO\nTHE PERSON" -> "Don't worry,\nI'll go\nwith her." [xlabel="22"]
+
+    "Don't worry,\nI'll go\nwith her." -> "I'll avoid the monsters as well." [xlabel="4"]
+    "Don't worry,\nI'll go\nwith her." -> "I'll defeat all the monsters head-one." [xlabel="4"]
+
+    "I'll avoid the monsters as well." -> "GO TO\nDADAUPA\nGORGE 2" [xlabel="4"]
+    "GO TO\nDADAUPA\nGORGE 2" -> "TALK TO\nDIONA 6" [xlabel="0"]
+    "TALK TO\nDIONA 6" -> "AVOID THE\nMONSTERS" [xlabel="2"]
+
+    "AVOID THE\nMONSTERS" -> "<FAIL>" [xlabel="0"]
+    "<FAIL>" -> "AVOID THE\nMONSTERS" [xlabel="0"]
+
+    "AVOID THE\nMONSTERS" -> "<SUCCESS>" [xlabel="0"]
+    "<SUCCESS>" -> "HEAD TO\nHILICHURL\nCAMP" [xlabel="2"]
+
+    "I'll defeat all the monsters head-one." -> "HEAD TO\nHILICHURL\nCAMP" [xlabel="5"]
+    "HEAD TO\nHILICHURL\nCAMP" -> "What's a\nhilihog." [xlabel="9"]
+    "What's a\nhilihog." -> "I was looking forward\nto seeing some\nhilihogs and\nhilihounds..." [xlabel="3"]
+
+    "I was looking forward\nto seeing some\nhilihogs and\nhilihounds..." -> "Draff said he\nhad just found some,\nlet's ask him." [xlabel="5"]
+    "I was looking forward\nto seeing some\nhilihogs and\nhilihounds..." -> "I can deal with\na few monsters.\nI'll bring some\nof that herbal\nsoup back." [xlabel="5"]
+
+    "Draff said he\nhad just found some,\nlet's ask him." -> "Draff, may I\ntake a loot\nat your flask?\nDiona needs to\nuse some of\nthat herbal soup." [xlabel="1"]
+    "Draff, may I\ntake a loot\nat your flask?\nDiona needs to\nuse some of\nthat herbal soup." -> "Well, looks\nlike we have\neverything\nwe need." [xlabel="8"]
+    "Well, looks\nlike we have\neverything\nwe need." -> "Can you\nreally use\nthis to sober\nhim up?" [xlabel="3"]
+
+    "Can you\nreally use\nthis to sober\nhim up?" -> "(Could those\ningredients\nreally make\nsomething that\ngood?)" [xlabel="11"]
+    "Can you\nreally use\nthis to sober\nhim up?" -> "(What's going\non...?)" [xlabel="11"]
+
+    "(Could those\ningredients\nreally make\nsomething that\ngood?)" -> dot16 [xlabel="4", arrowhead=none]
+
+    "Diona\nhas it." -> "TALK TO\nALLAN 1" [xlabel="18"]
+
+    "Diona already\nused the soup\nto sober you up." -> "TALK TO\nALLAN 1" [xlabel="16"]
+    "TALK TO\nALLAN 1" -> "TALK TO\nDIONA 4" [xlabel="18"]
+    "TALK TO\nDIONA 4" -> "How are you able\nto make anything\nfrom an\ningredient\nthat smells\nlike that?" [xlabel="2"]
+    "How are you able\nto make anything\nfrom an\ningredient\nthat smells\nlike that?" -> "That bad, huh...\nDidn't you just\nsay that you\ncan only make\ndelicious drinks?" [xlabel="7"]
+    "That bad, huh...\nDidn't you just\nsay that you\ncan only make\ndelicious drinks?" -> "Diona's\nSpecial" [xlabel="2"]
+
+    "(What's going\non...?)" -> dot16 [xlabel="4", arrowhead=none]
+
+    "I can deal with\na few monsters.\nI'll bring some\nof that herbal\nsoup back." -> "FIND\nTHE\nSOUP" [xlabel="3"]
+    "FIND\nTHE\nSOUP" -> "TALK TO\nDIONA 7" [xlabel="0"]
+
+    "TALK TO\nDIONA 7" -> "Got it\nright here" [xlabel="1"]
+    "TALK TO\nDIONA 7" -> "Can you\nreally use\nthis to make\nhim sober up?" [xlabel="1"]
+
+    "Got it\nright here" -> dot12 [xlabel="9", arrowhead=none]
+
+    "(What a\nhorrible\nsmell...)" -> "TALK TO\nALLAN 2" [xlabel="30"]
+    "TALK TO\nALLAN 2" -> "Don't worry,\nI'm not of\nage yet..." [xlabel="8"]
+    "Don't worry,\nI'm not of\nage yet..." -> "I...\nOnly Had...\na Little..." [xlabel="6"]
+
+    "(Is this\nreally\ndrinkable...?)" -> "TALK TO\nALLAN 2" [xlabel="30"]
+
+    "Can you\nreally use\nthis to make\nhim sober up?" -> dot12 [xlabel="9", arrowhead=none]
+
+    "Maybe we can\nuse something\nelse instead?" -> "GO TO\nDADAUPA\nGORGE 1" [xlabel="4"]
+
+
+
+
+
+    "I'd like the\nflavoring to be\nmore unique..." -> "FOLLOW\nDIONA 3" [xlabel=1]
+
+    "FOLLOW\nDIONA 3" -> "What are these...?" [xlabel=6]
+    "FOLLOW\nDIONA 3" -> "These look\nmore like alchemy\ningredients..." [xlabel=6]
+
+    "What are these...?" -> "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 1" [xlabel=6]
+    "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 1" -> "You sure know\na lot about fish." [xlabel=3]
+    "You sure know\na lot about fish." -> "GIVE FISH\nTO DIONA" [xlabel=2]
+
+    "GIVE FISH\nTO DIONA" -> "Uh, I'm got to go\nstand as far as\npossible from this stuff." [xlabel=3]
+    "GIVE FISH\nTO DIONA" -> "I really need to\nwash my hands." [xlabel=3]
+
+    "Uh, I'm got to go\nstand as far as\npossible from this stuff." -> "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 2" [xlabel=3]
+    "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 2" -> "GIVE SLIME\nCONDENSATE\nTO DIONA" [xlabel=3]
+    "GIVE SLIME\nCONDENSATE\nTO DIONA" -> "Why do you\nwant to use this\nto make drinks?" [xlabel=8]
+
+    "Why do you\nwant to use this\nto make drinks?" -> "How about trying\na different way of\nmaking the drinks?" [xlabel=11]
+    "Why do you\nwant to use this\nto make drinks?" -> "How do you usually\nmake your drinks?" [xlabel=11]
+
+    "How about trying\na different way of\nmaking the drinks?" -> "Why don't we\nstart by looking\nat you mixing\ntechnique?" [xlabel=3]
+    "Why don't we\nstart by looking\nat you mixing\ntechnique?" -> "Or else the drink\nwill taste bad?" [xlabel=3]
+    "Or else the drink\nwill taste bad?" -> "I don't think anyone\nin this world would\never sell me alcohol..." [xlabel=5]
+    "I don't think anyone\nin this world would\never sell me alcohol..." -> "This is you\nopportunity to\nask about mixing\ntechniques." [xlabel=9]
+    "This is you\nopportunity to\nask about mixing\ntechniques." -> "We'd like to ask\n you about your\ntechnique for\nmixing drinks." [xlabel=2]
+
+    "We'd like to ask\n you about your\ntechnique for\nmixing drinks." -> "(Is it me, or was that\nrehearsed speech?)" [xlabel=10]
+    "We'd like to ask\n you about your\ntechnique for\nmixing drinks." -> "(It feels like he's\nbeen practicing\nthis speech...)" [xlabel=10]
+
+    "(Is it me, or was that\nrehearsed speech?)" -> "GO TO\nDAWN WINERY" [xlabel=5]
+    "GO TO\nDAWN WINERY" -> "How did you\nprepare so many\nthings in advance?" [xlabel=5]
+    "How did you\nprepare so many\nthings in advance?" -> "I don't look to\nbe of drinking age\nyet. Yes, I know..." [xlabel=6]
+
+    "I don't look to\nbe of drinking age\nyet. Yes, I know..." -> "(What a...\ncoincidence.)" [xlabel=7]
+    "I don't look to\nbe of drinking age\nyet. Yes, I know..." -> "(These two have\nbeen planning this\nall along.)" [xlabel=7]
+
+    "(What a...\ncoincidence.)" -> "Collaborate\nwith them?" [xlabel=1]
+    "Collaborate\nwith them?" -> "(Their faces are\ngonna cramp up with\nall the facial cues they're\nthrowing each other...)" [xlabel=9]
+    "(Their faces are\ngonna cramp up with\nall the facial cues they're\nthrowing each other...)" -> "I tried to remember\nas much as I could." [xlabel=15]
+    "I tried to remember\nas much as I could." -> "Why don't you\n just make it?" [xlabel=2]
+    "Why don't you\n just make it?" -> "(It's like they're\nfinishing each other's\nsentences)" [xlabel=4]
+    "(It's like they're\nfinishing each other's\nsentences)" -> "MAKE A\nCOCKTAIL" [xlabel=3]
+
+    "MAKE A\nCOCKTAIL" -> "(Put the whole Lizard\nTail directly into the\nDandelion Wine.)" [xlabel=1]
+    "MAKE A\nCOCKTAIL" -> "(Soak the Lizard Tail\nin the distilled alcohol,\nthen add the distilled\nalcohol into the\nDandelion Wine.)" [xlabel=1]
+
+    "(Put the whole Lizard\nTail directly into the\nDandelion Wine.)" -> dot2 [xlabel=3, arrowhead=none]
+
+    "(Add all the\nSmile Condensate\ninto th drink)" -> dot3 [xlabel="2", arrowhead=none]
+    "(Add just a small\nbit of Smile Condensate\ninto the drink.)" -> dot3 [xlabel=2, arrowhead=none]
+
+    "(Add all the Butterfly\nDust and Fish Scales to the drink.)" -> "GIVE COCKTAIL\nTO DIONA" [xlabel=5]
+    "GIVE COCKTAIL\nTO DIONA" -> "Actually, this drink\ndoes smell pretty good." [xlabel=21]
+
+    "Actually, this drink\ndoes smell pretty good." -> "(Cut the Lizard Tail\ninto slices then put\nthem into the drink.)" [xlabel=4]
+    "Actually, this drink\ndoes smell pretty good." -> "(Put the entire Lizard\nTail into the drink.)" [xlabel=4]
+
+    "(Cut the Lizard Tail\ninto slices then put\nthem into the drink.)" -> dot5 [xlabel="1", arrowhead=none]
+
+    "(Put the entire Lizard\nTail into the drink.)" -> dot5 [xlabel=1, arrowhead=none]
+
+    "(Add large amounts\nof Slime Condensate,\nstir, and let settle...)" -> dot6 [xlabel=1, arrowhead=none]
+
+    "(Sprinkle a pinch\nof Butterfly Dust.)" -> dot7 [xlabel="1", arrowhead=none]
+
+    "(Pour a heap of\nButterfly Dust.)" -> dot7 [xlabel=1, arrowhead=none]
+
+    "(Add Fish Scales and\nmucus into the drink.)" -> "TALK TO\nDIONA 3" [xlabel=1]
+
+    "TALK TO\nDIONA 3" -> "Is it really\nthat bad?" [xlabel=9]
+    "TALK TO\nDIONA 3" -> "It can't be that\nbad, can it?" [xlabel=9]
+
+    "Is it really\nthat bad?" -> dot9 [xlabel=5, arrowhead=none]
+
+    "(When did this\nguy come back?)" -> "The\nUltimate\nSpecial" [xlabel="20"]
+
+    "(These two are\nstarting to gesture\nto each other again.)" -> "The\nUltimate\nSpecial" [xlabel=20]
+
+    "It can't be that\nbad, can it?"-> dot9 [xlabel="5", arrowhead=none]
+
+
+
+
+
+
+    "(Crush the Fish Scales\nfirst, and then add it with\nthe mucus into the drink.)" -> "TALK TO\nDIONA 3" [xlabel="1"]
+
+    "(Add a small amount of\nSlime Condensate, let\nsettle, then stir...)" -> dot6 [xlabel="1", arrowhead=none]
+
+    "(Don't add the\nButterfly Dust and Fish\nScales to the drink.)" -> "GIVE COCKTAIL\nTO DIONA" [xlabel="2"]
+
+    "(Soak the Lizard Tail\nin the distilled alcohol,\nthen add the distilled\nalcohol into the\nDandelion Wine.)" -> dot2 [xlabel=3, arrowhead=none]
+
+    "(These two have\nbeen planning this\nall along.)" -> "Collaborate\nwith them?" [xlabel="1"]
+
+    "(It feels like he's\nbeen practicing\nthis speech...)" -> "GO TO\nDAWN WINERY" [xlabel="5"]
+
+    "How do you usually\nmake your drinks?" -> "Why don't we\nstart by looking\nat you mixing\ntechnique?" [xlabel="3"]
+
+    "I really need to\nwash my hands." -> "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 2" [xlabel="3"]
+
+    "These look\nmore like alchemy\ningredients..." -> "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 1" [xlabel="5"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //legend
+    "checkpoint" [color=cyan]
+    "unexplored" [color=red]
+    "ending" [color=green]
+    "keypoint" [color=orange]
+    "heart" [color=purple]
+
+
+    //checkpoints
+    // cpX [shape=star, label="...", color=cyan]
+    // cpX -> "..."
+    cp1 [shape=star, label="The\nCat's\nBartender", color=cyan]
+    cp1 -> "TALK TO\nNIMROD"
+    cp2 [shape=star, label="What\nthe\nKitties\nLike", color=cyan]
+    cp2 -> "TALK TO\nDIONA 2"
+    cp3 [shape=star, label="To\nCatch\na\nKitten", color=cyan]
+    cp3 -> "FIND THE CAT 1"
+    cp4 [shape=star, label="When\nthe Cats\nCome\nHome", color=cyan]
+    cp4 -> "Return to\nThe\nCat's Tail"
+    cp5 [shape=star, label="Special\nCocktailing\nCondiments", color=cyan]
+    cp5 -> "FOLLOW\nDIONA 3"
+    cp6 [shape=star, label="A\nChance\nEncounter...?", color=cyan]
+    cp6 -> "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 2"
+    cp7 [shape=star, label="Exchanging\nPointers", color=cyan]
+    cp7 -> "How did you\nprepare so many\nthings in advance?" [xlabel="5"]
+    cp8 [shape=star, label="A Special\nBase\nDrink", color=cyan]
+    cp8 -> "TALK TO\nDIONA 5"
+    cp9 [shape=star, label="The\nShadow\nOver\nDadaupa", color=cyan]
+    cp9 -> "TALK TO\nDIONA 6"
+    cp10 [shape=star, label="Dead-Drunk\nDraff", color=cyan]
+    cp10 -> "HEAD TO\nHILICHURL\nCAMP"
+    cp11 [shape=star, label="Diona's\nSpecial", color=cyan]
+    cp11 -> "TALK TO\nDIONA 4" [xlabel="19"]
+    cp12 [shape=star, label="Samachurl\nHerbal\nSoup", color=cyan]
+    cp12 -> "FIND\nTHE\nSOUP"
+    cp13 [shape=star, label="A\nSobering\nAffair", color=cyan]
+    cp13 -> "TALK TO\nDIONA 7"
+    
+
+
+    //key points
+    // keyxstart [label="key point\n(start)", shape=house, color=orange]
+    // keyxend [label="key point\n(end)", shape=house, color=orange]
+    // "xx" [fontcolor=orange]
+
+    key1start [label="key point\n(start)", shape=house, color=orange]
+    key1end [label="key point\n(end)", shape=house, color=orange]
+    "Well, he is\nreally cute\nafter all" [fontcolor=orange]
+    "I think the\ncustomers visit\nthe tavern primarily\nfor your cocktails" [fontcolor=orange]
+    "Maybe you should take\na hint from him and\ndo what he does?" [fontcolor=orange]
+    "Your specialty\ndrinks attract lots\nof attention already." [fontcolor=orange]
+    "That actually\nmight make\nmore money..." [fontcolor=orange]
+    "No more would\nknow about these\ncats if it\nweren't for your\nspecialty drinks." [fontcolor=orange]
+
+
+
+
+
+    //event
+    // "xx" [shape=circle]
+    "TALK TO\nNIMROD" [shape=circle]
+    "TALK TO\nDIONA 1" [label="TALK TO\nDIONA", shape=circle]
+    "TALK TO\nDIONA 2" [label="TALK TO\nDIONA", shape=circle]
+    "FOLLOW\nDIONA 1" [label="FOLLOW\nDIONA", shape=circle]
+    "TALK TO\nDIONA 5" [label="TALK TO\nDIONA", shape=circle]
+    "GO TO\nDADAUPA\nGORGE 1" [label="GO TO\nDADAUPA\nGORGE", shape=circle]
+    "TALK TO\nTHE PERSON" [shape=circle]
+    "GO TO\nDADAUPA\nGORGE 2" [label="GO TO\nDADAUPA\nGORGE", shape=circle]
+    "TALK TO\nDIONA 6" [label="TALK TO\nDIONA", shape=circle]
+    "AVOID THE\nMONSTERS" [shape=circle]
+    "HEAD TO\nHILICHURL\nCAMP" [shape=circle]
+    "FIND\nTHE\nSOUP" [shape=circle]
+    "TALK TO\nDIONA 7" [label="TALK TO\nDIONA", shape=circle]
+    "TALK TO\nALLAN 2" [label="TALK TO\nALLAN", shape=circle]
+    "TALK TO\nALLAN 1" [label="TALK TO\nALLAN", shape=circle]
+    "TALK TO\nDIONA 4" [label="TALK TO\nDIONA", shape=circle]
+    "FOLLOW\nDIONA 2" [label="FOLLOW\nDIONA", shape=circle]
+    "FIND THE CAT 1" [label="FIND THE CAT", shape=circle]
+    "FIND THE CAT 2" [label="FIND THE CAT", shape=circle]
+    "FIND THE CAT 3"  [label="FIND THE CAT", shape=circle]
+    "FOLLOW\nDIONA 3" [label="FOLLOW\nDIONA", shape=circle]
+    "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 1" [label="EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS", shape=circle]
+    "GIVE FISH\nTO DIONA" [shape=circle]
+    "EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS 2" [label="EXPLORE AND\nCOLLECT COCKTAIL\nINGREDIENTS", shape=circle]
+    "GIVE SLIME\nCONDENSATE\nTO DIONA" [shape=circle]
+    "GO TO\nDAWN WINERY" [shape=circle]
+    "MAKE A\nCOCKTAIL" [shape=circle]
+    "GIVE COCKTAIL\nTO DIONA" [shape=circle]
+    "TALK TO\nDIONA 3" [label="TALK TO\nDIONA", shape=circle]
+
+
+    //dots
+    // dot16 [shape=point]
+    // dot16 -> "text1" [xlabel="?", arrowhead=none]
+    // dot16 -> "text2" [xlabel="?", arrowhead=none]
+    dot1 [shape=point]
+    dot1 -> "Well, he is\nreally cute\nafter all"
+    dot1 -> "I think the\ncustomers visit\nthe tavern primarily\nfor your cocktails"
+
+    dot2 [shape=point]
+    dot2 -> "(Add all the\nSmile Condensate\ninto th drink)" 
+    dot2 -> "(Add just a small\nbit of Smile Condensate\ninto the drink.)"
+
+    dot3 [shape=point]
+    dot3 -> "(Add all the Butterfly\nDust and Fish Scales to the drink.)"
+    dot3 -> "(Don't add the\nButterfly Dust and Fish\nScales to the drink.)"
+
+    dot5 [shape=point]
+    dot5 -> "(Add large amounts\nof Slime Condensate,\nstir, and let settle...)"
+    dot5 -> "(Add a small amount of\nSlime Condensate, let\nsettle, then stir...)"
+
+    dot6 [shape=point]
+    dot6 -> "(Sprinkle a pinch\nof Butterfly Dust.)"
+    dot6 -> "(Pour a heap of\nButterfly Dust.)"
+
+    dot7 [shape=point]
+    dot7 -> "(Add Fish Scales and\nmucus into the drink.)"
+    dot7 -> "(Crush the Fish Scales\nfirst, and then add it with\nthe mucus into the drink.)"
+
+    dot9 [shape=point]
+    dot9 -> "(When did this\nguy come back?)"
+    dot9 -> "(These two are\nstarting to gesture\nto each other again.)"
+
+    dot11 [shape=point]
+    dot11 -> "I'd like the\nbase to be\nmore unique..."
+    dot11 -> "I'd like the\nflavoring to be\nmore unique..."
+
+    dot12 [shape=point]
+    dot12 -> "(What a\nhorrible\nsmell...)"
+    dot12 -> "(Is this\nreally\ndrinkable...?)"
+
+    dot13 [shape=point]
+    dot13 -> "Maybe you should take\na hint from him and\ndo what he does?"
+    dot13 -> "Your specialty\ndrinks attract lots\nof attention already."
+
+    dot14 [shape=point]
+    dot14 -> "Does he like\ncat toys?"
+    dot14 -> "Does he like\ncat food?"
+
+    dot15 [shape=point]
+    dot15 -> "That actually\nmight make\nmore money..."
+    dot15 -> "No more would\nknow about these\ncats if it\nweren't for your\nspecialty drinks."
+
+    dot16 [shape=point]
+    dot16 -> "Diona\nhas it."
+    dot16 -> "Diona already\nused the soup\nto sober you up."
+
+
+
+    //heart gain/lose
+    "Let's use the\ncat food anyway." [xlabel="-3", color=purple]
+    "Let's use\nthe cat toy\nanyway." [xlabel="-3", color=purple]
+    "<FAIL>" [xlabel="-2", color=purple]
+    "(Soak the Lizard Tail\nin the distilled alcohol,\nthen add the distilled\nalcohol into the\nDandelion Wine.)" [xlabel=-1, color=purple]
+    "(Add all the\nSmile Condensate\ninto th drink)" [xlabel="+1", color=purple]
+    "(Add just a small\nbit of Smile Condensate\ninto the drink.)" [xlabel="-1", color=purple]
+    "(Add all the Butterfly\nDust and Fish Scales to the drink.)" [xlabel="+1", color=purple]
+    "(Don't add the\nButterfly Dust and Fish\nScales to the drink.)" [xlabel="-1", color=purple]
+
+
+
+    //ending
+    // "xx" [color=green]
+    "The\nUnfathomable\nFalines" [color=green]
+    "Cat\nParty" [color=green]
+    "Diona's\nSpecial" [color=green]
+    "I...\nOnly Had...\na Little..." [color=green]
+    "The\nUltimate\nSpecial" [color=green]
+
+
+    //duplicata
+    // "xx 1" [label="xx"]
+    "Use the\ncat toy. 1" [label="Use the\ncat toy."]
+    "Use the\ncat food. 1" [label="Use the\ncat food."]
+    "Use the\ncat food. 2" [label="Use the\ncat food."]
+    "Use the\ncat toy. 2" [label="Use the\ncat toy."]
+
+
+
+    //special
+    "<FAIL>" [shape=doublecircle]
+    "<SUCCESS>" [shape=doublecircle]
+
+
+
+
+
+}
