@@ -5,6 +5,7 @@ PDF_DIR= pdfs/
 HANGOUTS = diona_act-i_the-cat-and-the-cocktail noelle_act-i_chivalric-training #example
 
 all: clean_pdf_dir $(HANGOUTS)
+	@echo "Don't forget to use $$~ make clean\nwhen you're done, and wish to remove all pdfs"
 
 
 # example:
