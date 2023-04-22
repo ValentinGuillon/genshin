@@ -1,5 +1,5 @@
 
-DOT_DIR= dots/
+HANGOUT_DIR= hangout-events/
 PDF_DIR= pdfs/
 
 HANGOUTS = diona_act-i_the-cat-and-the-cocktail noelle_act-i_chivalric-training #example
@@ -8,13 +8,13 @@ all: clean_pdf_dir $(HANGOUTS)
 
 
 # example:
-# 	dot -Tpdf $(DOT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
+# 	dot $@.dot -o $(PDF_DIR)$@.pdf
 
 diona_act-i_the-cat-and-the-cocktail:
-	@dot -Tpdf $(DOT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
+	@dot -Tpdf $(HANGOUT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
 
 noelle_act-i_chivalric-training:
-	@dot -Tpdf $(DOT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
+	@dot -Tpdf $(HANGOUT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
 
 
 clean_pdf_dir:
