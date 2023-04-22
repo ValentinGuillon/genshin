@@ -8,12 +8,12 @@ all: clean_pdf_dir $(HANGOUTS)
 
 
 # example:
-# 	dot $@.dot -o $(PDF_DIR)$@.pdf
+# 	dot -Tpdf $@.dot -o $(PDF_DIR)$@.pdf
 
-diona_act-i_the-cat-and-the-cocktail:
+diona_act-i_the-cat-and-the-cocktail: clean_pdf_dir
 	@dot -Tpdf $(HANGOUT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
 
-noelle_act-i_chivalric-training:
+noelle_act-i_chivalric-training: clean_pdf_dir
 	@dot -Tpdf $(HANGOUT_DIR)$@.dot -o $(PDF_DIR)$@.pdf
 
 
