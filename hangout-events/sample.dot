@@ -1,0 +1,72 @@
+
+digraph G {
+    rankdir=LR
+    node [style=filled, shape=rect]
+    // node [label="***"] //censure lol
+
+
+
+
+
+    //links
+    "xdialog" -> "ydialog"  [xlabel="1"]
+    "ydialog" -> "zdialog"  [xlabel="4"]
+
+
+
+
+
+    //legend
+    "checkpoint" [color=cyan]
+    "unexplored" [color=red]
+    "ending" [color=green]
+    "keypoint" [color=orange]
+    "heart" [color=purple]
+
+
+    //checkpoints
+    cpX [shape=star, label="cpx", color=cyan]
+    cpX -> "ydialog"
+    
+
+
+    //key points
+    // keyxstart [label="key point\n(start)", shape=house, color=orange]
+    // keyxend [label="key point\n(end)", shape=house, color=orange]
+    // "xx" [fontcolor=orange]
+
+
+
+
+
+    //event
+    // "xx" [shape=circle]
+
+
+
+    //dots
+    // dotx [shape=point]
+    // dotx -> "text1" [xlabel="?", arrowhead=none]
+    // dotx -> "text2" [xlabel="?", arrowhead=none]
+
+
+    //heart gain/lose
+    // "xdialog" [xlabel="-1", color=purple]
+
+
+
+    //ending
+    // "xx" [color=green]
+
+
+    //duplicata
+    // "xx 1" [label="xx"]
+
+
+
+    //special
+    // "<FAIL>" [shape=doublecircle]
+    // "<SUCCESS>" [shape=doublecircle]
+
+
+}
