@@ -1,5 +1,4 @@
-graphviz docu:
-https://graphviz.org/documentation/
+Convert dot files to pdf files, using graphviz (https://graphviz.org)
 
-.dot -> .pdf:
-dot -Tpdf filename.dot -o filename.pdf
+Use the command $~ make
+to create pdf files (don't forget add new files to the makefile)
