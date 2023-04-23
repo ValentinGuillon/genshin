@@ -12,35 +12,33 @@ digraph G {
 
 
     //links
-	"TALK TO\nNOELLE 1" -> "The Nights of\nFavonius have...\nmaids ?" [xlabel="?"]
-    "TALK TO\nNOELLE 1" -> "Is this...\n\"maid-knight\"\nattire?" [xlabel="?"]
+	"TALK TO\nNOELLE 1" -> "The Nights of\nFavonius have...\nmaids ?" [xlabel="2"]
+    "TALK TO\nNOELLE 1" -> "Is this...\n\"maid-knight\"\nattire?" [xlabel="2"]
 
-    "The Nights of\nFavonius have...\nmaids ?" -> "Chivalry\nTraining ?" [xlabel="?"]
-    "Is this...\n\"maid-knight\"\nattire?" -> "Chivalry\nTraining ?" [xlabel="?"]
+    "The Nights of\nFavonius have...\nmaids ?" -> "Chivalry\nTraining ?" [xlabel="2"]
+    "Is this...\n\"maid-knight\"\nattire?" -> "Chivalry\nTraining ?" [xlabel="2"]
 
-    "Chivalry\nTraining ?" -> "You seems\nto be...\nworking\nhard..." [xlabel="?"]
+    "Chivalry\nTraining ?" -> "You seems\nto be...\nworking\nhard..." [xlabel="3"]
 
-    "You seems\nto be...\nworking\nhard..." -> "You know...\nit's okay not\nto be a knight" [xlabel="?"]
-    "You seems\nto be...\nworking\nhard..." -> "Of course,\nwhere do you\nwant to start?" [xlabel="?"]
+    "You seems\nto be...\nworking\nhard..." -> "You know...\nit's okay not\nto be a knight" [xlabel="5"]
+    "You seems\nto be...\nworking\nhard..." -> "Of course,\nwhere do you\nwant to start?" [xlabel="5"]
 
-    "You know...\nit's okay not\nto be a knight" -> "A maid is a\nrespectable\nposition too,\nI'd like to\nbecome one." [xlabel="?"]
-    "You know...\nit's okay not\nto be a knight" -> "No matter how the\ntasks, they still\nneed someone\nto take care\nof them.\nI do small tasks\nall the time." [xlabel="?"]
+    "You know...\nit's okay not\nto be a knight" -> "A maid is a\nrespectable\nposition too,\nI'd like to\nbecome one." [xlabel="3"]
+    "You know...\nit's okay not\nto be a knight" -> "No matter how the\ntasks, they still\nneed someone\nto take care\nof them.\nI do small tasks\nall the time." [xlabel="4"]
 
-    "A maid is a\nrespectable\nposition too,\nI'd like to\nbecome one." -> "I'm\nconstantly\nrunning\nerrands." [xlabel="?"]
+    "A maid is a\nrespectable\nposition too,\nI'd like to\nbecome one." -> "I'm constantly\nrunning\nerrands." [xlabel="1"]
 
-    "I'm\nconstantly\nrunning\nerrands." -> "The strength to fight\npowerful ennemies only\ncomes with experience\ngained durind the completion\nof smaller tasks" [xlabel="?"]
-    "I'm\nconstantly\nrunning\nerrands." -> "Besides, you don't\nexactly mind such\ntasks, right?" [xlabel="?"]
+    "I'm constantly\nrunning\nerrands." -> "The strength to fight\npowerful ennemies only\ncomes with experience\ngained durind the completion\nof smaller tasks" [xlabel="1"]
+    "I'm constantly\nrunning\nerrands." -> "Besides, you don't\nexactly mind such\ntasks, right?" [xlabel="1"]
 
-    "The strength to fight\npowerful ennemies only\ncomes with experience\ngained durind the completion\nof smaller tasks" -> "Go back to Mondstadt\nand see if ther are\n people who nee help" [xlabel="?"]
-    "The strength to fight\npowerful ennemies only\ncomes with experience\ngained durind the completion\nof smaller tasks" -> "Think of every\nsmall task as a\nkind of training." [xlabel="?"]
+    "The strength to fight\npowerful ennemies only\ncomes with experience\ngained durind the completion\nof smaller tasks" -> dot6 [xlabel="3", arrowhead=none]
 
-    "Go back to Mondstadt\nand see if ther are\n people who nee help"[color=red]
-    //...
+    "Go back to Mondstadt\nand see if there are\n people who need help." -> "FOLLOW\nNOELLE" [xlabel="1"]
 
-    "Think of every\nsmall task as a\nkind of training." -> "FOLLOW\nNOELLE" [xlabel="?"]
-    "FOLLOW\nNOELLE" -> "TALK TO\nNOELLE 2" [xlabel="?"]
-    "TALK TO\nNOELLE 2" -> "...Mm-hmm...?" [xlabel="?"]
-    "...Mm-hmm...?" -> "I can get them\nback for you" [xlabel="10"]
+    "Think of every\nsmall task as a\nkind of training." -> "FOLLOW\nNOELLE" [xlabel="1"]
+    "FOLLOW\nNOELLE" -> "TALK TO\nNOELLE 2" [xlabel="0"]
+    "TALK TO\nNOELLE 2" -> "...Mm-hmm...?" [xlabel="7"]
+    "...Mm-hmm...?" -> "I can get them\nback for you" [xlabel="9"]
     "I can get them\nback for you" -> "Where did\nyou see\nthose monsters ?" [xlabel="3"]
     "Where did\nyou see\nthose monsters ?" -> "Back\nsoon." [xlabel="2"]
     "Back\nsoon." -> "DEAL WITH\nMONSTERS" [xlabel="5"]
@@ -49,16 +47,13 @@ digraph G {
     "REPORT\nBACK" -> "Not a trace" [xlabel="2"]
     "REPORT\nBACK" -> "Only a few\nmonsters..." [xlabel="2"]
 
-    dot2 [shape=point]
     "Not a trace" -> dot2 [arrowhead=none, xlabel="3"]
-    "Only a few\nmonsters..." -> dot2 [arrowhead=none, xlabel="?"]
-    dot2 -> "They were\nonly a\nfew slimes." 
-    dot2 -> "They weren't\nexactly twice\nyour height."
+    "Only a few\nmonsters..." -> dot2 [arrowhead=none, xlabel="3"]
 
     "They were\nonly a\nfew slimes." -> "Twice\nor\nthrice...?" [xlabel="2"]
-    "They weren't\nexactly twice\nyour height." -> "Twice\nor\nthrice...?" [xlabel="?"]
+    "They weren't\nexactly twice\nyour height." -> "Twice\nor\nthrice...?" [xlabel="2"]
 
-    "Twice\nor\nthrice...?" -> "Noelle, can\nwe talk for\na moment ?" [xlabel="11"]
+    "Twice\nor\nthrice...?" -> "Noelle, can\nwe talk for\na moment ?" [xlabel="12"]
     "Noelle, can\nwe talk for\na moment ?" -> "This fellow\nseems\nsuspicious\nto me." [xlabel="1"]
     "This fellow\nseems\nsuspicious\nto me." -> "You have\na point..." [xlabel="4"]
     "You have\na point..." -> "GO TO\nMONDSTADT" [xlabel="4"]
@@ -78,44 +73,31 @@ digraph G {
 
     "...Made\nespecially\nfor you." -> "You're very\ninterested, no?" [xlabel="1"]
     "You're very\ninterested, no?" -> "Not to worry.\nLet's go to\nthe Good Hunter\nrestaurant." [xlabel="3"]
-    "Not to worry.\nLet's go to\nthe Good Hunter\nrestaurant." -> "GO TO\nGOOD\nHUNTER" [xlabel="1"]
+    "Not to worry.\nLet's go to\nthe Good Hunter\nrestaurant." -> "GO TO\nGOOD\nHUNTER 1" [xlabel="1"]
 
-    "GO TO\nGOOD\nHUNTER" -> "Brewing\nprocess?" [xlabel="2"]
-    "GO TO\nGOOD\nHUNTER" -> "Easier to\nobtain?" [xlabel="2"]
+    "GO TO\nGOOD\nHUNTER 1" -> "Brewing\nprocess?" [xlabel="2"]
+    "GO TO\nGOOD\nHUNTER 1" -> "Easier to\nobtain?" [xlabel="2"]
 
-    dot3 [shape=point]
     "Brewing\nprocess?" -> dot3 [xlabel="15", arrowhead=none]
-
-    dot3 -> "This one\nwas made\nespecially\nfor you. 1" 
-    dot3 -> "It's just\nNoelle's way\nof showing\nhospitality. 1"
 
     "This one\nwas made\nespecially\nfor you. 1" -> "Your last meal as a\nnew visitor, of course.\nSo enjoy!" [xlabel="1"]
 
-    dot4 [shape=point]
     "Your last meal as a\nnew visitor, of course.\nSo enjoy!" -> dot4 [xlabel="1", arrowhead=none]
-
-    dot4 -> "Where are we going\nafter the meal?"
-    dot4 -> "Noelle, do we have anything\nelse on the itinerary?"
 
     "Where are we going\nafter the meal?" -> "GO TO\n\"WITH\nWIND\nCOMES\nGLORY\"" [xlabel="4"]
 
     "GO TO\n\"WITH\nWIND\nCOMES\nGLORY\"" -> "She's a maid\nof the\nKnights of\nFavonius." [xlabel="7"]
     "GO TO\n\"WITH\nWIND\nCOMES\nGLORY\"" -> "She's a\nfuture\nknight of\nFavonious." [xlabel="7"]
 
-    dot5 [shape=point]
-
     "She's a maid\nof the\nKnights of\nFavonius." -> dot5 [xlabel="1", arrowhead=none]
     "She's a\nfuture\nknight of\nFavonious." -> dot5 [xlabel="2", arrowhead=none]
-
-    dot5 -> "This one\nwas made\nespecially\nfor you. 2"
-    dot5 -> "It's just\nNoelle's way\nof showing\nhospitality. 2"
 
     "This one\nwas made\nespecially\nfor you. 2" -> key1end [arrowhead=none]
 
     key1end -> "No need." [xlabel="12"]
     key1end -> "Allow me." [xlabel="12"]
 
-    "No need." -> "SEND ALOIS\nOFF FROM\nMONDSTADT" [xlabel="?"]
+    "No need." -> "SEND ALOIS\nOFF FROM\nMONDSTADT" [xlabel="4"]
     "SEND ALOIS\nOFF FROM\nMONDSTADT" -> "Okay,\nno further." [xlabel="1"]
     "Okay,\nno further." -> "I can't\nsee anyone\naround." [xlabel="1"]
 
@@ -170,217 +152,258 @@ digraph G {
     "After all,\nshe is the\nmost reliable\nmaid in all\nMondstadt" -> "I'll be\nthere too" [xlabel="2"]
     "I'll be\nthere too" -> "GO TO\nANGEL'S\nSHARE" [xlabel="1"]
 
-    "Besides, you don't\nexactly mind such\ntasks, right?"[color=red]
-    //...
+    "Besides, you don't\nexactly mind such\ntasks, right?" -> dot6 [xlabel="3", arrowhead=none]
 
-    "No matter how the\ntasks, they still\nneed someone\nto take care\nof them.\nI do small tasks\nall the time."[color=red]
-    //...
+    "No matter how the\ntasks, they still\nneed someone\nto take care\nof them.\nI do small tasks\nall the time." -> "I'm constantly\nrunning\nerrands." [xlabel="1"]
 
+    "Of course,\nwhere do you\nwant to start?" -> "Maidly duties?" [xlabel="3"]
+    "Of course,\nwhere do you\nwant to start?" -> "Knightly\nexercises?" [xlabel="3"]
 
+    "Maidly duties?" -> dot1 [arrowhead=none, xlabel="5"]
+    "Knightly\nexercises?" -> dot1 [arrowhead=none, xlabel="4"]
 
+    "What you lack\nis strength!" -> "Can you\nshow me?" [xlabel="5"]
+    "Can you\nshow me?" -> "GO TO\nTRAINING\nGROUND" [xlabel="3"]
+    "GO TO\nTRAINING\nGROUND" -> "Nothing left...?" [xlabel="7"]
+    "Nothing left...?" -> "Really? This\nwon't be too\ndifficult for her?" [xlabel="3"]
+    "Really? This\nwon't be too\ndifficult for her?" -> "Right? Surely\nit's too much." [xlabel="1"]
+    "Right? Surely\nit's too much." -> "DESTROY\nTHE DUMMIES" [xlabel="1"]
+    "DESTROY\nTHE DUMMIES" -> "Such incredible\nstrength..." [xlabel="1"]
 
+    "Such incredible\nstrength..." -> "Is it because you\nlack real-world\nfighting experience?" [xlabel="6"]
+    "Such incredible\nstrength..." -> "Because... you still\nneed more strength!" [xlabel="6"]
 
+    "Is it because you\nlack real-world\nfighting experience?" -> "Noelle, you've\nalways worked\nas a maid in\nMondstadt, right?" [xlabel="1"]
+    "Is it because you\nlack real-world\nfighting experience?" -> "Noelle, you\nrarely leave\nMondstadt for\ntraining, right?" [xlabel="1"]
 
+    "Noelle, you've\nalways worked\nas a maid in\nMondstadt, right?" -> dot7 [xlabel="3", arrowhead=none]
 
+    "You could start\nby training\nin the areas\naround\nMondstadt." -> "LOOK\nFOR\nSLIMES" [xlabel="1"]
+    "LOOK\nFOR\nSLIMES" -> "DEFEAT\nSLIMES 2" [xlabel="1"]
+    "DEFEAT\nSLIMES 2" -> "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 1" [xlabel="0"]
+    "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 1" -> "DEFEAT\nSLIMES 3" [xlabel="0"]
+    "DEFEAT\nSLIMES 3" -> "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 2" [xlabel="0"]
+    "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 2" -> "DEFEAT THE\nEYE OF\nTHE STORM" [xlabel="0"]
+    "DEFEAT THE\nEYE OF\nTHE STORM" -> "If it were\nme just now,\nI would have\ngone to Amber\nor Lisa\nfor help." [xlabel="3"]
 
+    "If it were\nme just now,\nI would have\ngone to Amber\nor Lisa\nfor help." -> "It is precisely\nbecause the power\nof a single knight\nis limited that\nthe Knights of\nFavonius was formed.\nDon't you think?" [xlabel="1"]
+    "If it were\nme just now,\nI would have\ngone to Amber\nor Lisa\nfor help." -> "Unity and teamwork\nallow each knight\nto better utilize\ntheir strengths." [xlabel="1"]
 
+    "It is precisely\nbecause the power\nof a single knight\nis limited that\nthe Knights of\nFavonius was formed.\nDon't you think?" -> "Noelle, why don't\nyou choose the\nfinal traing target?" [xlabel="4"]
+    "Noelle, why don't\nyou choose the\nfinal traing target?" -> "Choosing an\nappropriate\nennemy is also\na part of\nyour training..." [xlabel="1"]
+    "Choosing an\nappropriate\nennemy is also\na part of\nyour training..." -> "Let's do\nit together." [xlabel="6"]
+    "Let's do\nit together." -> "HEAD TO\nHILICHURL\nCAMP" [xlabel="1"]
+    "HEAD TO\nHILICHURL\nCAMP" -> "DEFEAT THE\nHILICHURLS" [xlabel="0"]
+    "DEFEAT THE\nHILICHURLS" -> "TALK TO\nHENNING" [xlabel="0"]
+    "TALK TO\nHENNING" -> "Just glad\nyou're okay" [xlabel="3"]
 
-    "Of course,\nwhere do you\nwant to start?" -> "Maidly duties?" [xlabel="?"]
-    "Of course,\nwhere do you\nwant to start?" -> "Knightly\nexercises?" [xlabel="?"]
+    "Just glad\nyou're okay" -> "We were quite\nfar away..." [xlabel="2"]
+    "Just glad\nyou're okay" -> "Could you really\nrecognize Noelle\nfrom that distance?" [xlabel="2"]
 
-    dot1 [shape=point]
-    "Maidly duties?" -> dot1 [arrowhead=none, xlabel="?"]
-    "Knightly\nexercises?" -> dot1 [arrowhead=none, xlabel="?"]
+    "We were quite\nfar away..." -> "Sounds like\nyou're a\nlittle too\ndependant on her." [xlabel="3"]
 
-    dot1 -> "What you lack\nis strength!"
-    dot1 -> "What you\nlack is rest."
+    "Sounds like\nyou're a\nlittle too\ndependant on her." -> "Those weren't\nweak hilichurls." [xlabel="4"]
+    "Sounds like\nyou're a\nlittle too\ndependant on her." -> "You've gotten\nstronger." [xlabel="4"]
 
-    "What you lack\nis strength!" -> "Can you\nshow me?" [xlabel="?"]
-    "Can you\nshow me?" -> "GO TO\nTRAINING\nGROUND" [xlabel="?"]
-    "GO TO\nTRAINING\nGROUND" -> "Nothing left...?" [xlabel="?"]
-    "Nothing left...?" -> "Really? This\nwon't be too\ndifficult for her?" [xlabel="?"]
-    "Really? This\nwon't be too\ndifficult for her?" -> "Right? Surely\nit's too much." [xlabel="?"]
-    "Right? Surely\nit's too much." -> "DESTROY\nTHE DUMMIES" [xlabel="?"]
-    "DESTROY\nTHE DUMMIES" -> "Such incredible\nstrength..." [xlabel="?"]
+    "Those weren't\nweak hilichurls." -> dot8 [xlabel="2", arrowhead=none]
 
-    "Such incredible\nstrength..." -> "Is it because you\nlack real-world\nfighting experience?" [xlabel="?"]
-    "Such incredible\nstrength..." -> "Because... you still\nneed more strength!" [xlabel="?"]
+    "The intention\nwas different." -> "It's because\nprotecting others\nis the source\nof your strength." [xlabel="3"]
 
-    "Is it because you\nlack real-world\nfighting experience?" [color=red]
-    "Because... you still\nneed more strength!" -> "I use me sword for\nmining all over Teyvat" [xlabel="?"]
-    "I use me sword for\nmining all over Teyvat" -> "Prepare yourself.\nmining isn't as easy\nas you think." [xlabel="?"]
-    "Prepare yourself.\nmining isn't as easy\nas you think." -> "HEAD TO\nMINING SITE" [xlabel="?"]
-    "HEAD TO\nMINING SITE" -> "MINE 1" [xlabel="?"]
-    "MINE 1" -> "DEFEAT\nSLIMES" [xlabel="?"]
-    "DEFEAT\nSLIMES" -> "INVESTIGATE\nLOCATION" [xlabel="?"]
-    "INVESTIGATE\nLOCATION" -> "DEFEAT\nMITACHURL" [xlabel="?"]
-    "DEFEAT\nMITACHURL" -> "TALK TO\nTHE KNIGHT" [xlabel="?"]
+    "It's because\nprotecting others\nis the source\nof your strength." -> "This is no\nresaon for\nyou to rely\non her though." [xlabel="2"]
+    "It's because\nprotecting others\nis the source\nof your strength." -> "In the future,\ndon't leave\neverything to\nNoelle" [xlabel="2"]
 
-    "TALK TO\nTHE KNIGHT" -> "No." [xlabel="?"]
-    "TALK TO\nTHE KNIGHT" -> "Not at all." [xlabel="?"]
+    "This is no\nresaon for\nyou to rely\non her though." -> "A\nDefender's\nWill\nIs Their\nStrength" [xlabel="4"]
 
-    "No." -> "...Ore veins?" [xlabel="?"]
-    "...Ore veins?" -> "...Ore?" [xlabel="?"]
-    "...Ore?" -> "DESTROY\nTHE ROCKS" [xlabel="?"]
-    "DESTROY\nTHE ROCKS" -> "DEFEAT THE\nLAWACHURL" [xlabel="?"]
-    "DEFEAT THE\nLAWACHURL" -> "MINE 2" [xlabel="?"]
+    "In the future,\ndon't leave\neverything to\nNoelle" -> "A\nDefender's\nWill\nIs Their\nStrength" [xlabel="4"]
 
-    "MINE 2" -> "So the training\ntargets were just\nmining outcrops..." [xlabel="?"]
-    "MINE 2" -> "Noelle really\nwasn't kidding\nabout her strength..." [xlabel="?"]
+    "This wasn't\ntraining...\nyou were\ntrying to\nprotect someone" -> "It's because\nprotecting others\nis the source\nof your strength." [xlabel="3"]
 
-    "So the training\ntargets were just\nmining outcrops..." [color=red]
-    //...
+    "You've gotten\nstronger." -> dot8 [xlabel="2", arrowhead=none]
 
-    "Noelle really\nwasn't kidding\nabout her strength..." -> "Is cleaning up\n for the knights that\nintense...?" [xlabel="?"]
-
-    "Is cleaning up\n for the knights that\nintense...?" -> "Your strength\nblew me away!" [xlabel="?"]
-    "Is cleaning up\n for the knights that\nintense...?" -> "You did much\nbetter than I expected.\nTo be honest, at first I..." [xlabel="?"]
-
-    "Your strength\nblew me away!" -> "A\nMaid\nAbove\nGround" [xlabel="?"]
-
-
-
-
-    "You did much\nbetter than I expected.\nTo be honest, at first I..." [color=red]
+    "Could you really\nrecognize Noelle\nfrom that distance?" -> "Sounds like\nyou're a\nlittle too\ndependant on her." [xlabel="3"]
 
 
 
 
+    "Unity and teamwork\nallow each knight\nto better utilize\ntheir strengths." -> "Noelle, why don't\nyou choose the\nfinal traing target?" [xlabel="4"]
 
-    "Not at all." [color=red]
-    //...
-
-
+    "Slimes are a good starting point." -> "LOOK\nFOR\nSLIMES" [xlabel="1"]
 
 
 
 
-    "What you\nlack is rest." -> "A true knight\nalso need\nsufficient rest." [xlabel="?"]
+    "Noelle, you\nrarely leave\nMondstadt for\ntraining, right?" -> dot7 [xlabel="3", arrowhead=none]
 
-    "A true knight\nalso need\nsufficient rest." -> "Stopping for occasional\nrest is all part of ensuring\nthat you can train to you\nmaximum ability" [xlabel="?"]
-    "A true knight\nalso need\nsufficient rest." -> "If you're too bussy,\nyou won't have time\nto reflect on your\nprogress and goals" [xlabel="?"]
+    "Because... you still\nneed more strength!" -> "I use me sword for\nmining all over Teyvat" [xlabel="3"]
+    "I use me sword for\nmining all over Teyvat" -> "Prepare yourself.\nmining isn't as easy\nas you think." [xlabel="3"]
+    "Prepare yourself.\nmining isn't as easy\nas you think." -> "HEAD TO\nMINING SITE" [xlabel="1"]
+    "HEAD TO\nMINING SITE" -> "MINE 1" [xlabel="1"]
+    "MINE 1" -> "DEFEAT\nSLIMES 1" [xlabel="0"]
+    "DEFEAT\nSLIMES 1" -> "INVESTIGATE\nLOCATION" [xlabel="0"]
+    "INVESTIGATE\nLOCATION" -> "DEFEAT\nMITACHURL" [xlabel="0"]
+    "DEFEAT\nMITACHURL" -> "TALK TO\nTHE KNIGHT" [xlabel="0"]
 
-    "Stopping for occasional\nrest is all part of ensuring\nthat you can train to you\nmaximum ability" [color=red]
-    //...
+    "TALK TO\nTHE KNIGHT" -> "No." [xlabel="7"]
+    "TALK TO\nTHE KNIGHT" -> "Not at all." [xlabel="7"]
 
-    "If you're too bussy,\nyou won't have time\nto reflect on your\nprogress and goals" -> "In Lisa's case,\nI'm afraid it's probably\njust resting for the\nsake of resting." [xlabel="?"]
-    "If you're too bussy,\nyou won't have time\nto reflect on your\nprogress and goals" -> "And speakking of tea,\nlet's have some!" [xlabel="?"]
+    "No." -> "...Ore veins?" [xlabel="4"]
+    "...Ore veins?" -> "...Ore?" [xlabel="3"]
+    "...Ore?" -> "DESTROY\nTHE ROCKS" [xlabel="4"]
+    "DESTROY\nTHE ROCKS" -> "DEFEAT THE\nLAWACHURL" [xlabel="0"]
+    "DEFEAT THE\nLAWACHURL" -> "MINE 2" [xlabel="0"]
 
-    "In Lisa's case,\nI'm afraid it's probably\njust resting for the\nsake of resting." [color=red]
-    //...
+    "MINE 2" -> "So the training\ntargets were just\nmining outcrops..." [xlabel="2"]
+    "MINE 2" -> "Noelle really\nwasn't kidding\nabout her strength..." [xlabel="2"]
 
-    "And speakking of tea,\nlet's have some!" -> "GO TO\nGOOD HUNTER" [xlabel="?"]
+    "So the training\ntargets were just\nmining outcrops..." -> "Is cleaning up\n for the knights that\nintense...?" [xlabel="3"]
 
-    "GO TO\nGOOD HUNTER" -> "Didn't we say\nwe were going\nto take a break?" [xlabel="?"]
-    "GO TO\nGOOD HUNTER" -> "I'll certainly\n do my best" [xlabel="?"]
+    "Noelle really\nwasn't kidding\nabout her strength..." -> "Is cleaning up\n for the knights that\nintense...?" [xlabel="3"]
 
-    "Didn't we say\nwe were going\nto take a break?" -> "So even a break\nrequires serious\nplanning..." [xlabel="?"]
-    "So even a break\nrequires serious\nplanning..." -> "Well, if\nyou insist..." [xlabel="?"]
-    "Well, if\nyou insist..." -> "Let's analyze the\nsituation first..." [xlabel="?"]
+    "Is cleaning up\n for the knights that\nintense...?" -> "Your strength\nblew me away!" [xlabel="5"]
+    "Is cleaning up\n for the knights that\nintense...?" -> "You did much\nbetter than I expected.\nTo be honest, at first I..." [xlabel="5"]
 
-    "Let's analyze the\nsituation first..." -> "Maybe the frequent\nsmall talk..." [xlabel="?"]
-    "Let's analyze the\nsituation first..." -> "...So Quinn feels\nthat Bea has nothing\nimportant to say to him..." [xlabel="?"]
+    "Your strength\nblew me away!" -> "A\nMaid\nAbove\nGround" [xlabel="2"]
 
-    "Maybe the frequent\nsmall talk..." [color=red]
-    //...
+    "You did much\nbetter than I expected.\nTo be honest, at first I..." -> "A\nMaid\nAbove\nGround" [xlabel="2"]
 
-    "...So Quinn feels\nthat Bea has nothing\nimportant to say to him..." -> "It should't matter,\nit's thought\nthat counts." [xlabel="?"]
-    "...So Quinn feels\nthat Bea has nothing\nimportant to say to him..." -> "Gifts convey our\nintentions, we should\nchoose carefully." [xlabel="?"]
+    "Not at all." -> "...Ore veins?" [xlabel="4"]
 
-    "It should't matter,\nit's thought\nthat counts." [color=red]
-    //...
+    "What you\nlack is rest." -> "A true knight\nalso need\nsufficient rest." [xlabel="3"]
 
-    "Gifts convey our\nintentions, we should\nchoose carefully." -> "Roses and\nhandmade things\nboth sound nice" [xlabel="?"]
-    "Gifts convey our\nintentions, we should\nchoose carefully." -> "But let's think\n about what Quinn\nmight like..." [xlabel="?"]
+    "A true knight\nalso need\nsufficient rest." -> "Stopping for occasional\nrest is all part of ensuring\nthat you can train to you\nmaximum ability" [xlabel="2"]
+    "A true knight\nalso need\nsufficient rest." -> "If you're too busy,\nyou won't have time\nto reflect on your\nprogress and goals" [xlabel="2"]
 
-    "Roses and\nhandmade things\nboth sound nice" [color=red]
-    //...
+    "Stopping for occasional\nrest is all part of ensuring\nthat you can train to you\nmaximum ability" -> dot9 [xlabel="3", arrowhead=none]
 
-    "But let's think\n about what Quinn\nmight like..." -> "TALK TO\nMARJORIE" [xlabel="?"]
-    "TALK TO\nMARJORIE" -> "Barely ever ?" [xlabel="?"]
+    "If you're too busy,\nyou won't have time\nto reflect on your\nprogress and goals" -> dot9 [xlabel="3", arrowhead=none]
 
-    "Barely ever ?" -> "Actually, we're\nhere to help someone\nelse choose a gift." [xlabel="?"]
-    "Barely ever ?" -> "Actually,\nI'm here\nto buy a\ngift for Noelle" [xlabel="?"]
-    "Barely ever ?" -> "Even without gifts,\ntoday is still a say\nto be celebrated." [xlabel="?"]
+    "In Lisa's case,\nI'm afraid it's probably\njust resting for the\nsake of resting." -> "Never mind.\nSpeaking of tea,\nlet's have some!" [xlabel="1"]
+    "Never mind.\nSpeaking of tea,\nlet's have some!" -> "GO TO\nGOOD\nHUNTER 2" [xlabel="1"]
 
-    "Actually, we're\nhere to help someone\nelse choose a gift." -> "Seems you have a\nknack for this kind\nof thing, Marjorie." [xlabel="?"]
-    "Seems you have a\nknack for this kind\nof thing, Marjorie." -> "It's like\nthis..." [xlabel="?"]
+    "And speaking of tea,\nlet's have some!" -> "GO TO\nGOOD\nHUNTER 2" [xlabel="1"]
 
-    "It's like\nthis..." -> "The Frostening\nBottle..." [xlabel="?"]
-    "It's like\nthis..." -> "The Squirrel\nWood Carving..." [xlabel="?"]
+    "GO TO\nGOOD\nHUNTER 2" -> "Didn't we say\nwe were going\nto take a break?" [xlabel="18"]
+    "GO TO\nGOOD\nHUNTER 2" -> "I'll certainly\n do my best" [xlabel="18"]
 
-    "The Frostening\nBottle..." [color=red]
-    //...
+    "Didn't we say\nwe were going\nto take a break?" -> "So even a break\nrequires serious\nplanning..." [xlabel="3"]
+    "So even a break\nrequires serious\nplanning..." -> "Well, if\nyou insist..." [xlabel="1"]
+    "Well, if\nyou insist..." -> "Let's analyze the\nsituation first..." [xlabel="1"]
 
-    "The Squirrel\nWood Carving..." -> "GIVE GIFT\nTO BEA" [xlabel="?"]
-    "GIVE GIFT\nTO BEA" -> "No...\nreally?" [xlabel="?"]
-    "No...\nreally?" -> "GO TO\nCAPE OATH" [xlabel="?"]
-    "GO TO\nCAPE OATH" -> "TAKE A\nPICTURE 1" [xlabel="?"]
-    "TAKE A\nPICTURE 1" -> "GO TO\nSTARSNATCH\nCLIFF" [xlabel="?"]
-    "GO TO\nSTARSNATCH\nCLIFF" -> "TAKE A PICTURE 2" [xlabel="?"]
-    "TAKE A PICTURE 2" -> "GO TO\nWINDRISE 1" [xlabel="?"]
-    "GO TO\nWINDRISE 1" -> "TAKE A PICTURE 3" [xlabel="?"]
-    "TAKE A PICTURE 3" -> "TALK\nTO BEA" [xlabel="?"]
+    "Let's analyze the\nsituation first..." -> "Maybe the frequent\nsmall talk..." [xlabel="2"]
+    "Let's analyze the\nsituation first..." -> "...So Quinn feels\nthat Bea has nothing\nimportant to say to him..." [xlabel="2"]
+
+    "Maybe the frequent\nsmall talk..." -> dot10 [xlabel="4", arrowhead=none]
+
+    "...So Quinn feels\nthat Bea has nothing\nimportant to say to him..." -> dot10 [xlabel="4", arrowhead=none]
+
+    "It should't matter,\nit's thought\nthat counts." -> "Sending a\nMondstadt\nGrilled Fish\nshould be fine." [xlabel="4"]
+    "Sending a\nMondstadt\nGrilled Fish\nshould be fine." -> "MAKE A\nMONDSTADT\nGRILLED FISH" [xlabel="1"]
+    "MAKE A\nMONDSTADT\nGRILLED FISH" -> "GIVE IT\nTO BEA" [xlabel="0"]
+
+    "GIVE IT\nTO BEA" -> "But now's not\nthe best time\nto disturb them..." [xlabel="5"]
+    "GIVE IT\nTO BEA" -> "Now then,\nlet's take\nthat break..." [xlabel="5"]
+
+    "But now's not\nthe best time\nto disturb them..." -> dot11 [xlabel="2", arrowhead=none]
+
+    "No whipping\nanything up..." -> "TALK\nTO BEA 2" [xlabel="1"]
+
+    "TALK\nTO BEA 2" -> "...Noelle..." [xlabel="15"]
+    "TALK\nTO BEA 2" -> "...Everything okay?" [xlabel="15"]
+
+    "...Noelle..." -> "It's impossible\nto be an expert\non everything,\nyou know..." [xlabel="2"]
+    "It's impossible\nto be an expert\non everything,\nyou know..." -> "TALK TO\nNOELLE AT\nTHE LIBRARY" [xlabel="4"]
+    "TALK TO\nNOELLE AT\nTHE LIBRARY" -> "What are\nyou reading?" [xlabel="4"]
+    "What are\nyou reading?" -> "...So, what book\ndo we have here?" [xlabel="3"]
+
+    "...So, what book\ndo we have here?" -> "About\nwhat?" [xlabel="5"]
+    "...So, what book\ndo we have here?" -> "Can I take a look?" [xlabel="5"]
+
+    "About\nwhat?" -> "A\nConundrum\nCalled\nLove" [xlabel="4"]
+
+    "Can I take a look?" -> "A\nConundrum\nCalled\nLove" [xlabel="4"]
+
+    "...Everything okay?" ->"It's impossible\nto be an expert\non everything,\nyou know..." [xlabel="2"]
+
+    "You're taking\na break,\nremember?" -> "TALK\nTO BEA 2" [xlabel="1"]
+
+
+
+
+
+
+    "Now then,\nlet's take\nthat break..." -> dot11 [xlabel="2", arrowhead=none]
+
+    "Gifts convey our\nintentions, we should\nchoose carefully." -> "Roses and\nhandmade things\nboth sound nice" [xlabel="5"]
+    "Gifts convey our\nintentions, we should\nchoose carefully." -> "But let's think\n about what Quinn\nmight like..." [xlabel="5"]
+
+    "Roses and\nhandmade things\nboth sound nice" -> "TALK TO\nMARJORIE" [xlabel="6"]
+
+    "But let's think\n about what Quinn\nmight like..." -> "TALK TO\nMARJORIE" [xlabel="6"]
+    "TALK TO\nMARJORIE" -> "Barely ever ?" [xlabel="2"]
+
+    "Barely ever ?" -> "Actually, we're\nhere to help someone\nelse choose a gift." [xlabel="9"]
+    "Barely ever ?" -> "Actually,\nI'm here\nto buy a\ngift for Noelle" [xlabel="9"]
+    "Barely ever ?" -> "Even without gifts,\ntoday is still a say\nto be celebrated." [xlabel="9"]
+
+    "Actually, we're\nhere to help someone\nelse choose a gift." -> "Seems you have a\nknack for this kind\nof thing, Marjorie." [xlabel="4"]
+    "Seems you have a\nknack for this kind\nof thing, Marjorie." -> "It's like\nthis..." [xlabel="5"]
+
+    "It's like\nthis..." -> "The Frostening\nBottle..." [xlabel="5"]
+    "It's like\nthis..." -> "The Squirrel\nWood Carving..." [xlabel="5"]
+
+    "The Frostening\nBottle..." -> "GIVE GIFT\nTO BEA" [xlabel="3"]
+
+    "The Squirrel\nWood Carving..." -> "GIVE GIFT\nTO BEA" [xlabel="4"]
+    "GIVE GIFT\nTO BEA" -> "No...\nreally?" [xlabel="11"]
+    "No...\nreally?" -> "GO TO\nCAPE OATH" [xlabel="4"]
+    "GO TO\nCAPE OATH" -> "TAKE A\nPICTURE 1" [xlabel="0"]
+    "TAKE A\nPICTURE 1" -> "GO TO\nSTARSNATCH\nCLIFF" [xlabel="0"]
+    "GO TO\nSTARSNATCH\nCLIFF" -> "TAKE A PICTURE 2" [xlabel="0"]
+    "TAKE A PICTURE 2" -> "GO TO\nWINDRISE 1" [xlabel="0"]
+    "GO TO\nWINDRISE 1" -> "TAKE A PICTURE 3" [xlabel="0"]
+    "TAKE A PICTURE 3" -> "TALK\nTO BEA 1" [xlabel="0"]
     
-    "TALK\nTO BEA" -> "Starsnatch\nCliff..." [xlabel="?"]
-    "TALK\nTO BEA" -> "Cape\nOath..." [xlabel="?"]
-    "TALK\nTO BEA" -> "Windrise..." [xlabel="?"]
+    "TALK\nTO BEA 1" -> "Starsnatch\nCliff..." [xlabel="1"]
+    "TALK\nTO BEA 1" -> "Cape\nOath..." [xlabel="1"]
+    "TALK\nTO BEA 1" -> "Windrise..." [xlabel="1"]
 
-    "Starsnatch\nCliff..." [color=red]
-    //...
+    "Starsnatch\nCliff..." -> "When was the\nbook written" [xlabel="14"]
 
-    "Cape\nOath..." [color=red]
-    //...
+    "Cape\nOath..." -> "When was the\nbook written" [xlabel="13"]
 
-    "Windrise..." -> "When was the\nbook written" [xlabel="?"]
+    "Windrise..." -> "When was the\nbook written" [xlabel="12"]
 
-    "When was the\nbook written" -> "Don't worry\nabout it.\nI like it." [xlabel="?"]
-    "When was the\nbook written" -> "Would you like\nto go ther\nwith me?" [xlabel="?"]
+    "When was the\nbook written" -> "Don't worry\nabout it.\nI like it." [xlabel="3"]
+    "When was the\nbook written" -> "Would you like\nto go ther\nwith me?" [xlabel="3"]
 
-    "Don't worry\nabout it.\nI like it." [color=red]
-    //...
+    "Don't worry\nabout it.\nI like it." -> "Think of it as\nour last break\nof the day." [xlabel="1"]
 
-    "Would you like\nto go ther\nwith me?" -> "Think of it as\nour last break\nof the day." [xlabel="?"]
-    "Think of it as\nour last break\nof the day." -> "GO TO\nWINDRISE 2" [xlabel="?"]
-    "GO TO\nWINDRISE 2" -> "You can come\nhere whenever\nyou like, you know." [xlabel="?"]
+    "Would you like\nto go ther\nwith me?" -> "Think of it as\nour last break\nof the day." [xlabel="1"]
+    "Think of it as\nour last break\nof the day." -> "GO TO\nWINDRISE 2" [xlabel="1"]
+    "GO TO\nWINDRISE 2" -> "You can come\nhere whenever\nyou like, you know." [xlabel="2"]
 
-    "You can come\nhere whenever\nyou like, you know." -> "Isn't\nthat\ntiring?" [xlabel="?"]
-    "You can come\nhere whenever\nyou like, you know." -> "So this is the\nresponsibility that\nyou put on yourself?" [xlabel="?"]
+    "You can come\nhere whenever\nyou like, you know." -> "Isn't\nthat\ntiring?" [xlabel="3"]
+    "You can come\nhere whenever\nyou like, you know." -> "So this is the\nresponsibility that\nyou put on yourself?" [xlabel="3"]
 
-    "Isn't\nthat\ntiring?" [color=red]
-    //...
+    "Isn't\nthat\ntiring?" -> dot12 [xlabel="2", arrowhead=none]
 
-    "So this is the\nresponsibility that\nyou put on yourself?" -> "You already possess\nthe greatest qualities\nof a knight." [xlabel="?"]
-    "So this is the\nresponsibility that\nyou put on yourself?" -> "Helping others is\nthe greatest quality\nof a knight." [xlabel="?"]
+    "So this is the\nresponsibility that\nyou put on yourself?" -> dot12 [xlabel="2", arrowhead=none]
 
-    "You already possess\nthe greatest qualities\nof a knight." -> "...Do you know\nthe meaning of a rose?" [xlabel="?"]
-    "...Do you know\nthe meaning of a rose?" -> "Uh... never mind." [xlabel="?"]
+    "You already possess\nthe greatest qualities\nof a knight." -> "...Do you know\nthe meaning of a rose?" [xlabel="4"]
+    "...Do you know\nthe meaning of a rose?" -> "Uh... never mind." [xlabel="5"]
 
-    "Uh... never mind." -> "Whisper\nof\nthe\nPaper\nRose" [xlabel="?"]
+    "Uh... never mind." -> "Whisper\nof\nthe\nPaper\nRose" [xlabel="4"]
 
+    "Helping others is\nthe greatest quality\nof a knight." -> "...Do you know\nthe meaning of a rose?" [xlabel="4"]
 
+    "Actually,\nI'm here\nto buy a\ngift for Noelle" -> "Seems you have a\nknack for this kind\nof thing, Marjorie." [xlabel="4"]
 
-
-
-
-    "Helping others is\nthe greatest quality\nof a knight." [color=red]
-    //...
+    "Even without gifts,\ntoday is still a say\nto be celebrated." -> "Seems you have a\nknack for this kind\nof thing, Marjorie." [xlabel="4"]
 
 
 
 
-
-    "Actually,\nI'm here\nto buy a\ngift for Noelle" [color=red]
-    //...
-
-    "Even without gifts,\ntoday is still a say\nto be celebrated." [color=red]
-    //...
-
-
-
-
-    "I'll certainly\n do my best" [color=red]
-    //...
+    "I'll certainly\n do my best" -> "Let's analyze the\nsituation first..." [xlabel="1"]
 
 
 
@@ -396,15 +419,65 @@ digraph G {
 
     //legend
     "checkpoint" [color=cyan]
-    "unexplored" [color=red]
     "ending" [color=green]
     "keypoint" [color=orange]
+
+
+    //dot
+    dot1 [shape=point]
+    dot1 -> "What you lack\nis strength!"
+    dot1 -> "What you\nlack is rest."
+
+    dot2 [shape=point]
+    dot2 -> "They were\nonly a\nfew slimes." 
+    dot2 -> "They weren't\nexactly twice\nyour height."
+
+    dot3 [shape=point]
+    dot3 -> "This one\nwas made\nespecially\nfor you. 1" 
+    dot3 -> "It's just\nNoelle's way\nof showing\nhospitality. 1"
+
+    dot4 [shape=point]
+    dot4 -> "Where are we going\nafter the meal?"
+    dot4 -> "Noelle, do we have anything\nelse on the itinerary?"
+
+    dot5 [shape=point]
+    dot5 -> "This one\nwas made\nespecially\nfor you. 2"
+    dot5 -> "It's just\nNoelle's way\nof showing\nhospitality. 2"
+
+    dot6 [shape=point]
+    dot6 -> "Go back to Mondstadt\nand see if there are\n people who need help."
+    dot6 -> "Think of every\nsmall task as a\nkind of training."
+    
+    dot7 [shape=point]
+    dot7 -> "You could start\nby training\nin the areas\naround\nMondstadt."
+    dot7 -> "Slimes are a good starting point."
+
+    dot8 [shape=point]
+    dot8 -> "The intention\nwas different."
+    dot8 -> "This wasn't\ntraining...\nyou were\ntrying to\nprotect someone"
+
+    dot9 [shape=point]
+    dot9 -> "In Lisa's case,\nI'm afraid it's probably\njust resting for the\nsake of resting."
+    dot9 -> "And speaking of tea,\nlet's have some!"
+
+    dot10 [shape=point]
+    dot10 -> "It should't matter,\nit's thought\nthat counts."
+    dot10 -> "Gifts convey our\nintentions, we should\nchoose carefully."
+
+    dot11 [shape=point]
+    dot11 -> "No whipping\nanything up..."
+    dot11 -> "You're taking\na break,\nremember?"
+
+    dot12 [shape=point]
+    dot12 -> "You already possess\nthe greatest qualities\nof a knight."
+    dot12 -> "Helping others is\nthe greatest quality\nof a knight."
+
 
 
     //checkpoints
     // cpX [shape=star, label="...", color=cyan]
     // cpX -> "..."
-    cp1 [shape=star, label="Honorary\nKnight!", color=cyan]
+    cp1 [shape=star, label="\"Honorary\nKnight!\"", color=cyan]
     cp1 -> "TALK TO\nNOELLE 1"
     cp2 [shape=star, label="All of\nLife Is\nTraining", color=cyan]
     cp2 -> "FOLLOW\nNOELLE"
@@ -412,6 +485,22 @@ digraph G {
     cp3 -> "GO TO\nMONDSTADT"
     cp4 [shape=star, label="After\nHospitality\nComes...", color=cyan]
     cp4 -> "SEND ALOIS\nOFF FROM\nMONDSTADT"
+    cp5 [shape=star, label="Training\nGround", color=cyan]
+    cp5 -> "GO TO\nTRAINING\nGROUND"
+    cp6 [shape=star, label="For\nMore\nExperience", color=cyan]
+    cp6 -> "LOOK\nFOR\nSLIMES"
+    cp7 [shape=star, label="For\nGreater\nSrength", color=cyan]
+    cp7 -> "HEAD TO\nMINING SITE"
+    cp8 [shape=star, label="A\nBreather", color=cyan]
+    cp8 -> "GO TO\nGOOD\nHUNTER 2"
+    cp9 [shape=star, label="It's the\nHeart\nThat Matter", color=cyan]
+    cp9 -> "MAKE A\nMONDSTADT\nGRILLED FISH"
+    cp10 [shape=star, label="The Almighty\nMaid and Her\nImpossible Task", color=cyan]
+    cp10 -> "TALK TO\nNOELLE AT\nTHE LIBRARY"
+    cp11 [shape=star, label="Sincerest\nof\nGifts", color=cyan]
+    cp11 -> "TALK TO\nMARJORIE"
+    cp12 [shape=star, label="Promised\nPlace", color=cyan]
+    cp12 -> "GO TO\nWINDRISE 2"
 
 
     //key points
@@ -434,7 +523,7 @@ digraph G {
     "REPORT\nBACK" [shape=circle]
     "GO TO\nMONDSTADT" [shape=circle]
     "GO TO\nANGEL'S\nSHARE" [lshape=circle]
-    "GO TO\nGOOD\nHUNTER" [shape=circle]
+    "GO TO\nGOOD\nHUNTER 1" [label="GO TO\nGOOD\nHUNTER", shape=circle]
     "GO TO\n\"WITH\nWIND\nCOMES\nGLORY\"" [shape=circle]
     "SEND ALOIS\nOFF FROM\nMONDSTADT" [shape=circle]
     "TALK\nTO\nNOELLE" [shape=circle]
@@ -442,14 +531,14 @@ digraph G {
     "DESTROY\nTHE DUMMIES" [shape=circle]
     "HEAD TO\nMINING SITE" [shape=circle]
     "MINE 1" [label="MINE", shape=circle]
-    "DEFEAT\nSLIMES" [shape=circle]
+    "DEFEAT\nSLIMES 1" [label="DEFEAT\nSLIMES", shape=circle]
     "INVESTIGATE\nLOCATION" [shape=circle]
     "DEFEAT\nMITACHURL" [shape=circle]
     "TALK TO\nTHE KNIGHT" [shape=circle]
     "DESTROY\nTHE ROCKS" [shape=circle]
     "DEFEAT THE\nLAWACHURL" [shape=circle]
     "MINE 2" [label="MINE", shape=circle]
-    "GO TO\nGOOD HUNTER" [shape=circle]
+    "GO TO\nGOOD\nHUNTER 2" [label="GO TO\nGOOD\nHUNTER", shape=circle]
     "TALK TO\nMARJORIE" [shape=circle]
     "GIVE GIFT\nTO BEA" [shape=circle]
     "GO TO\nCAPE OATH" [shape=circle]
@@ -458,11 +547,25 @@ digraph G {
     "TAKE A PICTURE 2" [label="TAKE A\nPICTURE", shape=circle]
     "GO TO\nWINDRISE 1" [label="GO TO\nWINDRISE", shape=circle]
     "TAKE A PICTURE 3" [label="TAKE A\nPICTURE", shape=circle]
-    "TALK\nTO BEA" [shape=circle]
+    "TALK\nTO BEA 1" [label="TALK\nTO BEA", shape=circle]
     "GO TO\nWINDRISE 2" [label="GO TO\nWINDRISE", shape=circle]
+    "LOOK\nFOR\nSLIMES" [shape=circle]
+    "DEFEAT\nSLIMES 2" [label="DEFEAT\nSLIMES", shape=circle]
+    "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 1" [labal="LOOK FOR\nTHE NEXT\nTRAINING\nTARGET", shape=circle]
+    "DEFEAT\nSLIMES 3" [label="DEFEAT\nSLIMES", shape=circle]
+    "LOOK FOR\nTHE NEXT\nTRAINING\nTARGET 2" [labal="LOOK FOR\nTHE NEXT\nTRAINING\nTARGET", shape=circle]
+    "DEFEAT THE\nEYE OF\nTHE STORM" [shape=circle]
+    "HEAD TO\nHILICHURL\nCAMP" [shape=circle]
+    "DEFEAT THE\nHILICHURLS" [shape=circle]
+    "TALK TO\nHENNING" [shape=circle]
+    "MAKE A\nMONDSTADT\nGRILLED FISH" [shape=circle]
+    "GIVE IT\nTO BEA" [shape=circle]
+    "TALK\nTO BEA 2" [label="TALK\nTO BEA", shape=circle]
+    "TALK TO\nNOELLE AT\nTHE LIBRARY" [shape=circle]
 
 
     //heart gain/lose
+    "The Squirrel\nWood Carving..." [xlabel="-1", color=purple]
 
 
     //ending
@@ -470,6 +573,8 @@ digraph G {
     "Goodbye,\nMiss\nMaid!" [color=green]
     "A\nMaid\nAbove\nGround" [color=green]
     "Whisper\nof\nthe\nPaper\nRose" [color=green]
+    "A\nDefender's\nWill\nIs Their\nStrength" [color=green]
+    "A\nConundrum\nCalled\nLove" [color=green]
 
 
     //duplicata
@@ -477,10 +582,5 @@ digraph G {
     "It's just\nNoelle's way\nof showing\nhospitality. 2" [label="It's just\nNoelle's way\nof showing\nhospitality."]
     "This one\nwas made\nespecially\nfor you. 1" [label="This one\nwas made\nespecially\nfor you."]
     "This one\nwas made\nespecially\nfor you. 2" [label="This one\nwas made\nespecially\nfor you."]
-
-
-
-
-
 
 }
