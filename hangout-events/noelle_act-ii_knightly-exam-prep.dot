@@ -338,7 +338,6 @@ digraph G {
     
     "Surely he's too\ndrunk to tell us\nanything by now..." -> "Back to\ndrunkeness\nagain..." [xlabel="13"]
     
-    //report typo "Maybe plying the customers with alcohol isn't the best approach..."
     "Back to\ndrunkeness\nagain..." -> "Maybe plying the\ncustomers with alcohol\nisn't the best approach..." [xlabel="2"]
     "Back to\ndrunkeness\nagain..." -> "You could just\nlisten in on their\nconversations instead" [xlabel="2"]
     
