@@ -6,13 +6,9 @@ digraph G {
 
 
 
-
-
     //links
     "xdialog" -> "ydialog"  [xlabel="1"]
     "ydialog" -> "zdialog"  [xlabel="4"]
-
-
 
 
 
@@ -24,9 +20,13 @@ digraph G {
     "heart" [color=purple]
 
 
+
     //checkpoints
-    cpX [shape=star, label="cpx", color=cyan]
-    cpX -> "ydialog"
+    // cpX [shape=star, label="cpx", color=cyan]
+    // cpX -> "ydialog"
+
+    cp1 [shape=star, label="Starting", color=cyan]
+    cp1 -> "ydialog"
     
 
 
@@ -37,8 +37,6 @@ digraph G {
 
 
 
-
-
     //event
     // "xx" [shape=circle]
 
@@ -46,8 +44,10 @@ digraph G {
 
     //dots
     // dotx [shape=point]
-    // dotx -> "text1" [xlabel="?", arrowhead=none]
-    // dotx -> "text2" [xlabel="?", arrowhead=none]
+    // "text1" -> dotx [xlabel="?", arrowhead=none] //type this on the link's list
+    // dotx -> "text2"
+    // dotx -> "text3"
+
 
 
     //heart gain/lose
@@ -57,6 +57,7 @@ digraph G {
 
     //ending
     // "xx" [color=green]
+
 
 
     //duplicata
