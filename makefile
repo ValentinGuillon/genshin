@@ -4,11 +4,11 @@ PDF_DIR= pdfs/
 
 HANGOUTS = diona_act-i_the-cat-and-the-cocktail noelle_act-i_chivalric-training noelle_act-ii_knightly-exam-prep #example
 
-#just_one: clean_pdf_dir specific_hangouts
-# 	@echo "Don't forget to use $$~ make clean\nwhen you're done, and wish to remove all pdfs"
-
 all: clean_pdf_dir $(HANGOUTS)
 	@echo "Don't forget to use $$~ make clean\nwhen you're done, and wish to remove all pdfs"
+
+#just_one: clean_pdf_dir specific_hangouts
+# 	@echo "Don't forget to use $$~ make clean\nwhen you're done, and wish to remove all pdfs"
 
 
 # example:
