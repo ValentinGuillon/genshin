@@ -1,0 +1,539 @@
+
+digraph G {
+    rankdir=LR
+    node [style=filled, shape=rect]
+    // node [label="***"] //censure lol
+
+
+
+    //links
+    "TALK TO\nSISTER\nVICTORIA 1" -> "What's happened\nto Barbara?" [xlabel="1"]
+    "What's happened\nto Barbara?" -> "I'll go\nsearch for\nBarbara" [xlabel="2"]
+    "I'll go\nsearch for\nBarbara" -> "SEARCH\nFOR\nBARBARA 1" [xlabel="4"]
+    "SEARCH\nFOR\nBARBARA 1" -> "Barbara, I've\nfinally\nfound you" [xlabel="1"]
+    "Barbara, I've\nfinally\nfound you" -> "You'd been gone\nfor some time,\nwe decided to\ncome looking for you" [xlabel="1"]
+    "You'd been gone\nfor some time,\nwe decided to\ncome looking for you" -> "Why would you\nwant to hide?" [xlabel="7"]
+
+    "Why would you\nwant to hide?" -> "Just wait here,\nwe'll go send\nthat person away" [xlabel="1"]
+    "Why would you\nwant to hide?" -> "Let's go deeper\ninto the forest\nand wait for\nthem to leave" [xlabel="1"]
+    
+    "Just wait here,\nwe'll go send\nthat person away" -> "LOOK FOR\nTHE PERSON\nCALLING\nFOR\nBARBARA" [xlabel="2"]
+    "LOOK FOR\nTHE PERSON\nCALLING\nFOR\nBARBARA" -> "CONVINCE\nALBERT\nTO\nLEAVE"
+    "CONVINCE\nALBERT\nTO\nLEAVE" -> "What are\nyou shouting\nabout?" [xlabel="1"]
+    
+    "What are\nyou shouting\nabout?" -> "Oh, you\npicked all\nthe berries..." [xlabel="7"]
+    "What are\nyou shouting\nabout?" -> "Hold on,\nwhat's the\nBarbara\nFan Club?" [xlabel="7"]
+    
+    "Oh, you\npicked all\nthe berries..." -> key1start [xlabel="2", arrowhead=none]
+    
+    "Hold on,\nwhat's the\nBarbara\nFan Club?" -> "Even\nHuffman?" [xlabel="2"]
+    "Even\nHuffman?" -> key1start [xlabel="1", arrowhead=none]
+    
+    key1start -> "It is dangerous\nhere, there\nare lots of\nmonsters\nroaming about" [xlabel="2"]
+    key1start -> "Barbara isn't\nhere anymore,\nyou'd better\nhead back\nto the city" [xlabel="2"]
+    key1start -> "Wolvendom is a large area,\nit would be difficult for\nyou to cover it alone.\nYou should find some others\nto help you search first" [xlabel="2"]
+    
+    "It is dangerous\nhere, there\nare lots of\nmonsters\nroaming about" -> dot8 [xlabel="1", arrowhead=none]
+    "Barbara isn't\nhere anymore,\nyou'd better\nhead back\nto the city" -> dot8 [arrowhead=none, color=red]
+    "Barbara isn't\nhere anymore,\nyou'd better\nhead back\nto the city" -> dot8 [xlabel="2", arrowhead=none, color=red]
+    "Wolvendom is a large area,\nit would be difficult for\nyou to cover it alone.\nYou should find some others\nto help you search first" -> dot8 [arrowhead=none, color=green]
+    "Wolvendom is a large area,\nit would be difficult for\nyou to cover it alone.\nYou should find some others\nto help you search first" -> dot8 [xlabel="1", arrowhead=none, color=green]
+    
+    "I think you've\nalready searched\nmost of the\nareas where red\nWolfhooks grow" -> dot9 [arrowhead=none, color=green]
+    "I think you've\nalready searched\nmost of the\nareas where red\nWolfhooks grow" -> dot9 [xlabel="2", arrowhead=none, color=green]
+    "There might be\nsome other areas\nwhere Wolfhooks\ngrow that you\nhaven't heard\nabout, perhaps Barbara\nwent somewhere else?" -> dot9 [arrowhead=none, color=red]
+    "There might be\nsome other areas\nwhere Wolfhooks\ngrow that you\nhaven't heard\nabout, perhaps Barbara\nwent somewhere else?" -> dot9 [xlabel="1", arrowhead=none, color=red]
+    "How can you be\ncertain that she's\nout picking Wolfhooks?\nShe might not\neven be anywhere\nnearby here" -> dot9 [xlabel="1", arrowhead=none]
+        
+    "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" -> key1end [arrowhead=none, color=red]
+    "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" -> key1end [arrowhead=none, color=red]
+    "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" -> key1end [xlabel="3", arrowhead=none, color=red]
+    "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" -> key1end [xlabel="3", arrowhead=none, color=red]
+    "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago" -> "Of\ncourse\nnot" [xlabel="2", color=green]
+
+    "Of\ncourse\nnot" -> key1end [xlabel="1", arrowhead=none]
+    
+    key1end -> "FOLLOW\nALBERT" [xlabel="2", color=red]
+    key1end -> "REPORT\nBACK TO\nBARBARA" [xlabel="4", color=green]
+
+    "FOLLOW\nALBERT" -> "TALK TO\nALBERT"
+    "TALK TO\nALBERT" -> "Surely you're\nnot going to\ngive up so easily?" [xlabel="3"]
+    "Surely you're\nnot going to\ngive up so easily?" -> "I'll help\nyou keep\ncalling for her" [xlabel="1"]
+    
+    "I'll help\nyou keep\ncalling for her" -> "BARBARA --\nWHERE ARE\nYOU!!!???" [xlabel="1"]
+    "I'll help\nyou keep\ncalling for her" -> "BARBARA --\nARE YOU\nTHERE!!!???" [xlabel="1"]
+    
+    "BARBARA --\nWHERE ARE\nYOU!!!???" -> "See, Barbara's\nnowhere to be\nfound here.\nLet's head back" [xlabel="1"]
+    "BARBARA --\nARE YOU\nTHERE!!!???" -> "See, Barbara's\nnowhere to be\nfound here.\nLet's head back" [xlabel="1"]
+
+    "See, Barbara's\nnowhere to be\nfound here.\nLet's head back" -> "Untimely\nEnthusiasm" [xlabel="2"]
+
+
+    "REPORT\nBACK TO\nBARBARA" -> "Yeah, he's\ngone for now" [xlabel="1"]
+    "Yeah, he's\ngone for now" -> "Why are you\ntrying to avoid\nbeing seen? 1" [xlabel="1"]
+    "Why are you\ntrying to avoid\nbeing seen? 1" -> "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 1" [xlabel="11"]
+    "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 1" -> "Are these the\nkind of Wolfhook\nyou're looking for?" [xlabel="2"]
+    "Are these the\nkind of Wolfhook\nyou're looking for?" -> "But no one\neven knows about\nthis matter..." [xlabel="6"]
+    "But no one\neven knows about\nthis matter..." -> "LEAVE\nWOLVENDOM\nWITH\nBARBARA" [xlabel="3"]
+    
+
+    "Let's go deeper\ninto the forest\nand wait for\nthem to leave" -> "FOLLOW\nBARBARA 1" [xlabel="1"]
+    "FOLLOW\nBARBARA 1" -> "Why are you\ntrying to avoid\nbeing seen? 2" [xlabel="2"]
+    "Why are you\ntrying to avoid\nbeing seen? 2" -> "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 2" [xlabel="11"]
+    "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 2" -> "Let's wait for\nthat person to\nleave and then\nwe can go\nlook for some" [xlabel="1"]
+    
+    "Let's wait for\nthat person to\nleave and then\nwe can go\nlook for some" -> "It's alright, this\nis a perfect place\nfor two people\nto spend some\ntime together" [xlabel="1"]
+    "Let's wait for\nthat person to\nleave and then\nwe can go\nlook for some" -> "So what made you\ndecide to join\nthe Church, Barbara?" [xlabel="1"]
+    "Let's wait for\nthat person to\nleave and then\nwe can go\nlook for some" -> "Wouldn't your\nfamily worry about\nyou picking herbs\nall alone?" [xlabel="1"]
+    
+    "It's alright, this\nis a perfect place\nfor two people\nto spend some\ntime together" -> "<FAIL> 1" [xlabel="1"]
+
+    "So what made you\ndecide to join\nthe Church, Barbara?" -> "Does that mean\nI can come\nto you when\ni need healing,\ntoo?" [xlabel="8"]
+    
+    "Does that mean\nI can come\nto you when\ni need healing,\ntoo?" -> dot6 [xlabel="3", arrowhead=none]
+    
+    "Wouldn't your\nfamily worry about\nyou picking herbs\nall alone?" -> "Ah yes, Grand\nMaster Varka. I\nremember he's..." [xlabel="3"]
+    "Ah yes, Grand\nMaster Varka. I\nremember he's..." -> "What was the\npurpose of Grand\nMaster Varka's\nexpedition?" [xlabel="4"]
+    "What was the\npurpose of Grand\nMaster Varka's\nexpedition?" -> "I don't think\nI've ever met\nthis \"Cardinal\nCalvin\"" [xlabel="2"]
+
+    "I don't think\nI've ever met\nthis \"Cardinal\nCalvin\"" -> "(Look at Barbara\nwith an\ninnocent gaze)" [xlabel="7"]
+    "I don't think\nI've ever met\nthis \"Cardinal\nCalvin\"" -> "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..." [xlabel="7"]
+    
+    "(Look at Barbara\nwith an\ninnocent gaze)" -> dot6 [xlabel="3", arrowhead=none]
+    
+    "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..." -> "Wh-What do you\nmean? The Church\nis looking after\nit now, right." [xlabel="4"]
+    "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..." -> "N-No, nothing's\nwrong with it...\nThe bard fixed\nit, didn't he?" [xlabel="4"]
+    
+    "Wh-What do you\nmean? The Church\nis looking after\nit now, right." -> dot6 [xlabel="2", arrowhead=none]
+    "N-No, nothing's\nwrong with it...\nThe bard fixed\nit, didn't he?" -> dot6 [xlabel="2", arrowhead=none]
+    
+    "I'll lend\nyou a hand" -> "SEARCH\nFOR RED\nWOLFHOOKS" [xlabel="3"]
+    "We can\ngo look\ntogether" -> "SEARCH\nFOR RED\nWOLFHOOKS" [xlabel="3"]
+
+    "SEARCH\nFOR RED\nWOLFHOOKS" -> "SEARCH\nFOR\nBARBARA 2"
+    "SEARCH\nFOR\nBARBARA 2" -> "Yes, here\nthey are!" [xlabel="1"]
+    "Yes, here\nthey are!" -> "LEAVE\nWOLVENDOM\nWITH\nBARBARA" [xlabel="4"]
+    
+    "LEAVE\nWOLVENDOM\nWITH\nBARBARA" -> "Perhaps it'd\nbe better for\nyou to tell her\nyourself..." [xlabel="9"]
+    "LEAVE\nWOLVENDOM\nWITH\nBARBARA" -> "Leave it\nto us!" [xlabel="9"]
+    
+    "Perhaps it'd\nbe better for\nyou to tell her\nyourself..." -> "<FAIL> 3" [xlabel="1"]
+    
+    
+    "Leave it\nto us!" -> "REPORT\nBACK TO\nSISTER\nVICTORIA 1" [xlabel="1"]
+    
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 1" -> "We found\nBarbara\nin Wolvendom" [xlabel="1"]
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 1" -> "Barbara is at\nDawn Winery\nchecking\non Tunner" [xlabel="1"]
+    
+    "We found\nBarbara\nin Wolvendom" -> "We can\nhelp" [xlabel="2"]
+    "Barbara is at\nDawn Winery\nchecking\non Tunner" -> "We can\nhelp" [xlabel="2"]
+
+    "We can\nhelp" -> "Barbara is\nresponsible\nfor cleaning a\nplace this huge\nby herself?" [xlabel="4"]
+    "Barbara is\nresponsible\nfor cleaning a\nplace this huge\nby herself?" -> "CLEAN THE\nCATHEDRAL\nGROUNDS" [xlabel="4"]
+    "CLEAN THE\nCATHEDRAL\nGROUNDS" -> "REPORT\nBACK TO\nSISTER\nVICTORIA 2"
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 2" -> "When did\nyou get\nback?" [xlabel="1"]
+    
+    "When did\nyou get\nback?" -> "Fantastic Summer\n-Serendipity Coral\nSparkling Tea\ndoes sound\npretty amazing" [xlabel="8"]
+    "When did\nyou get\nback?" -> "I would like\nto try your\nspecial Chilibrew" [xlabel="8"]
+    
+    "Fantastic Summer\n-Serendipity Coral\nSparkling Tea\ndoes sound\npretty amazing" -> "Sounds good\nto me" [xlabel="7"]
+    "Sounds good\nto me" -> "But what if you\nrun into people\nasking for an\nautograph?" [xlabel="1"]
+    "But what if you\nrun into people\nasking for an\nautograph?" -> "TALK TO\nSISTER\nVICTORIA 3" [xlabel="2"]
+    "TALK TO\nSISTER\nVICTORIA 3" -> "About\nBarbara's\ntime off..." [xlabel="1"]
+    "About\nBarbara's\ntime off..." -> "About \"Fantastic\nSummer-Serendipity\nCoral Sparkling\nTea\"..." [xlabel="3"]
+    "About \"Fantastic\nSummer-Serendipity\nCoral Sparkling\nTea\"..." -> "Why does Barbara\nalways have to\nreport her plans? 2" [xlabel="4"]
+    "Why does Barbara\nalways have to\nreport her plans? 2" -> "LOOK FOR\nBARBARA\nAROUND THE\nCAT'S TAILS" [xlabel="7"]
+    "LOOK FOR\nBARBARA\nAROUND THE\nCAT'S TAILS" -> "(Looks like\nwe might\nneed to\nintervene...)" [xlabel="13"]
+    "(Looks like\nwe might\nneed to\nintervene...)" -> "(Barbara needs\nrescuing from\nthe crowd...)"
+    "(Barbara needs\nrescuing from\nthe crowd...)" -> key2start
+    
+    key2start -> "PERSUADE\nSUSIE"
+    
+    "PERSUADE\nSUSIE" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" [xlabel="1"]
+    "PERSUADE\nSUSIE" -> "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" [xlabel="1"]
+    
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" -> "(Darn...)" [xlabel="2"]
+    "(Darn...)" -> "PERSUADE\nHERMANN"
+    
+    "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" -> "Uh -- we're...\non official\nbusiness" [xlabel="1"]
+    "Uh -- we're...\non official\nbusiness" -> "PERSUADE\nHERMANN" [xlabel="3"]
+    
+    "PERSUADE\nHERMANN" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" [xlabel="1"]
+    "PERSUADE\nHERMANN" -> "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" [xlabel="1"]
+    
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" -> "(Uh oh...)" [xlabel="2"]
+    "(Uh oh...)" -> "PERSUADE\nSCHULZ"
+    
+    "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" -> "Barbara is on\nofficial business\nright now" [xlabel="1"]
+    "Barbara is on\nofficial business\nright now" -> "PERSUADE\nSCHULZ" [xlabel="1"]
+    
+    "PERSUADE\nSCHULZ" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" [xlabel="1"]
+    "PERSUADE\nSCHULZ" -> "Barbara's working\nright now,\nplease don't\ndisturb her" [xlabel="1"]
+    
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" -> "(This is bad...)" [xlabel="2"]
+    "(This is bad...)" -> key2end
+    
+    "Barbara's working\nright now,\nplease don't\ndisturb her" -> "We're... on\nofficial business" [xlabel="1"]
+    "We're... on\nofficial business" -> key2end [xlabel="1"]
+    
+    key2end -> "TALK TO\nBARBARA 3"
+    
+    "TALK TO\nBARBARA 3" -> "SUCCEED\nTO\nPERSUADE\nALL" [color=orange]
+    "TALK TO\nBARBARA 3" -> "FAILED\nTO\nPERSUADE\nALL"
+    
+    "SUCCEED\nTO\nPERSUADE\nALL" -> "They came to\ntheir senses\nonce I'd given\nthem the lowdown" [xlabel="1"]
+    "SUCCEED\nTO\nPERSUADE\nALL" -> "I temporarily\npersuaded them\nto beat it" [xlabel="1"]
+    "FAILED\nTO\nPERSUADE\nALL" -> "They're gonna\nkeep asking for\nmore and more..." [xlabel="10"]
+
+    "I temporarily\npersuaded them\nto beat it" -> "FOLLOW\nBARBARA 2" [xlabel="6"]
+    "They came to\ntheir senses\nonce I'd given\nthem the lowdown" -> "FOLLOW\nBARBARA 2" [xlabel="6"]
+
+    "They're gonna\nkeep asking for\nmore and more..." -> "I've waited\nlonger..." [xlabel="2"]
+    
+    "I've waited\nlonger..." -> "You don't\nlook too\ngood..." [xlabel="3"]
+    "I've waited\nlonger..." -> "You look\nexhaused..." [xlabel="3"]
+    
+    "You don't\nlook too\ngood..." -> "FOLLOW\nBARBARA 2" [xlabel="4"]
+    "You look\nexhaused..." -> "FOLLOW\nBARBARA 2" [xlabel="4"]
+    
+    "FOLLOW\nBARBARA 2" -> "Just now, in\nthe city... why\ndidn't you just\ntell them you\nwere on leave\nand walk away ?" [xlabel="1"]
+    "FOLLOW\nBARBARA 2" -> "That sudden crowd\nback there in\nthe city...\nyou must be\nexhausted" [xlabel="1"]
+    "FOLLOW\nBARBARA 2" -> "What's the\nBarbara Fan\nClub?" [xlabel="1", color=green]
+    "FOLLOW\nBARBARA 2" -> "I get the\nfeeling you're\nmore popular\nthan the\naverage sister..." [xlabel="1"]
+    
+    "Just now, in\nthe city... why\ndidn't you just\ntell them you\nwere on leave\nand walk away ?" -> "A\nHoliday\nin\nMondstadt" [xlabel="12"]
+    
+    "That sudden crowd\nback there in\nthe city...\nyou must be\nexhausted" -> "Isn't it\na little\nexhausting?" [xlabel="3"]
+    "Isn't it\na little\nexhausting?" -> "A\nHoliday\nin\nMondstadt" [xlabel="6"]
+    
+    "What's the\nBarbara Fan\nClub?" -> "And how many\nmembers does\nthe group have?" [xlabel="4"]
+    "And how many\nmembers does\nthe group have?" -> "Ah yes,\nthe knight..." [xlabel="1"]
+    "Ah yes,\nthe knight..." -> "A\nHoliday\nin\nMondstadt" [xlabel="8"]
+    
+    "I get the\nfeeling you're\nmore popular\nthan the\naverage sister..." -> "There was once\nan idol who\nstopped a war\nwith their\nsinging" [xlabel="6"]
+    
+    "There was once\nan idol who\nstopped a war\nwith their\nsinging" -> "Why, sure\nyou are" [xlabel="4"]
+    "There was once\nan idol who\nstopped a war\nwith their\nsinging" -> "You're already\na very gifted\nhealer" [xlabel="4"]
+    
+    "Why, sure\nyou are" -> "A\nHoliday\nin\nMondstadt" [xlabel="5"]
+    "You're already\na very gifted\nhealer" -> "A\nHoliday\nin\nMondstadt" [xlabel="5"]
+    
+    
+    "I would like\nto try your\nspecial Chilibrew" -> "I should\nbe fine...\nI think..." [xlabel="1"]
+    
+    "I should\nbe fine...\nI think..." -> "Alright,\nlet's\nsplit up" [xlabel="4"]
+    "I should\nbe fine...\nI think..." -> "I think it'd\nbe better if\nwe stick together" [xlabel="4"]
+    
+    "Alright,\nlet's\nsplit up" -> "TALK TO\nSISTER\nVICTORIA 2" [xlabel="3"]
+    "TALK TO\nSISTER\nVICTORIA 2" -> "About\nBarbara's\nitinerary..." [xlabel="1"]
+    "About\nBarbara's\nitinerary..." -> "Yes, I\nwill be\naccompanying\nher" [xlabel="3"]
+    "Yes, I\nwill be\naccompanying\nher" -> "Why does Barbara\nalways have to\nreport her plans? 1" [xlabel="1"]
+    "Why does Barbara\nalways have to\nreport her plans? 1" -> "HEAD\nNEAR\nSTONE\nGATE" [xlabel="7"]
+    "HEAD\nNEAR\nSTONE\nGATE" -> "MEET\nBARBARA\nIN THE\nWHISPERING\nWOODS"
+    
+    "MEET\nBARBARA\nIN THE\nWHISPERING\nWOODS" -> "I'm a little\nworried..." [xlabel="3"]
+    "MEET\nBARBARA\nIN THE\nWHISPERING\nWOODS" -> "Let's look\nfor her" [xlabel="3"]
+    
+    "I'm a little\nworried..." -> "SEARCH\nFOR\nBARBARA" [xlabel="2"]
+    "Let's look\nfor her" -> "SEARCH\nFOR\nBARBARA" [xlabel="1"]
+      
+    "SEARCH\nFOR\nBARBARA" -> "TALK TO\nBARBARA 1"
+    
+    "TALK TO\nBARBARA 1" -> "We tought\nsomething might\nhave happened,\nso we came\nlooking for you" [xlabel="1"]
+    "TALK TO\nBARBARA 1" -> "What are you\ndoing here?" [xlabel="1"]
+    
+    "We tought\nsomething might\nhave happened,\nso we came\nlooking for you" -> dot4 [xlabel="6", arrowhead=none]
+    "What are you\ndoing here?" -> dot4 [xlabel="5", arrowhead=none]
+    
+    "That was risky,\nwhat if you'd\nbeen discovered?" -> dot5 [xlabel="5", arrowhead=none]
+    "Best to go\nback and get\nthe Knights of\nFavonius involved" -> dot5 [xlabel="3", arrowhead=none]
+    
+    "Say no more,\nI'm sure these\nTreasure Hoarders\nwill respond well\nto a little \"direct\nintervention\"" -> "DEFEAT\nTHE\nTREASURE\nHOARDERS" [xlabel="1"]
+    "I try to\nrefrain from\nintervening too\ndirectly whenever\npossible..." -> "DEFEAT\nTHE\nTREASURE\nHOARDERS" [xlabel="2"]
+    
+    "DEFEAT\nTHE\nTREASURE\nHOARDERS" -> "I'd like to\ntry that Liyue\nChilibrew" [xlabel="16"]
+    "DEFEAT\nTHE\nTREASURE\nHOARDERS" -> "Let's go\nfor Mora" [xlabel="16"]
+    "DEFEAT\nTHE\nTREASURE\nHOARDERS" -> "Well, we\nwere looking\nfor Sweet\nFlowers..." [xlabel="16"]
+    
+    "TALK TO\nBARBARA 2" -> dot3 [xlabel="6", arrowhead=none]
+    
+    "I'd like to\ntry that Liyue\nChilibrew" -> dot3 [xlabel="9", arrowhead=none]
+    
+    "It's..\nsomething new..." -> "A Fiery\nFlavor\nFrom\nLiyue" [xlabel="5"]
+    "*coughing*" -> "A Fiery\nFlavor\nFrom\nLiyue" [xlabel="5"]
+    
+    "Let's go\nfor Mora" -> "<FAIL> 2" [xlabel="5"]
+    
+    "Well, we\nwere looking\nfor Sweet\nFlowers..." -> "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA" [xlabel="5"]
+    "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA" -> "This is...\npretty good" [xlabel="2"]
+    
+    "This is...\npretty good" -> "So what got\nyou into\nChilibrew?" [xlabel="2"]
+    "This is...\npretty good" -> "You've got an...\ninteresting taste\nin drinks..." [xlabel="2"]
+    
+    "So what got\nyou into\nChilibrew?" -> dot1 [xlabel="8", arrowhead=none]
+    "You've got an...\ninteresting taste\nin drinks..." -> dot1 [xlabel="9", arrowhead=none]
+    
+    "And that\ndidn't... affect\nyour voice ?" -> dot2 [xlabel="4", arrowhead=none]
+    "Sounds bad\nfor singing..." -> dot2 [xlabel="4", arrowhead=none]
+    
+    "I guess that's\nwhat \"hard work\"\ntastes like..." -> "The Taste\nof\nHard Work" [xlabel="8"]
+    "Sounds like\nthis bottle\nof Chilibrew\nis a reflection\nof your\ndetermination" -> "The Taste\nof\nHard Work" [xlabel="8"]
+    
+    
+    "I think it'd\nbe better if\nwe stick together" -> "TALK TO\nSISTER\nVICTORIA 4" [xlabel="4"]
+    "TALK TO\nSISTER\nVICTORIA 4" -> "I will\naccompany\nBarbara" [xlabel="6"]
+    "I will\naccompany\nBarbara" -> "LOOK FOR\nHIGH\n-QUALITY\nSWEET\nFLOWERS" [xlabel="4"]
+    
+    "LOOK FOR\nHIGH\n-QUALITY\nSWEET\nFLOWERS" -> "Piece\nof cake" [xlabel="1"]
+    "LOOK FOR\nHIGH\n-QUALITY\nSWEET\nFLOWERS" -> "Think I\nslipped\na disc" [xlabel="1"]
+    
+    "Piece\nof cake" -> "Barely a graze,\nnothing to\nworry about" [xlabel="2"]
+    "Think I\nslipped\na disc" -> "Barely a graze,\nnothing to\nworry about" [xlabel="2"]
+    
+    "Barely a graze,\nnothing to\nworry about" -> "You're not...\ndressed like\na hunter" [xlabel="8"]
+    "Barely a graze,\nnothing to\nworry about" -> "The leader of\nthe Springvale\nhunters...\nwhat's their\nname again?" [xlabel="8"]
+    "Barely a graze,\nnothing to\nworry about" -> "Springvale's\nquite a\ndistance away...\nWhat is it\nyou're hunting\nout here?" [xlabel="8"]
+    "Barely a graze,\nnothing to\nworry about" -> "You're dressed\na bit like a\nTreasure Hoarders..." [xlabel="8"]
+    
+    "You're not...\ndressed like\na hunter" -> "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." [xlabel="2"]
+    "The leader of\nthe Springvale\nhunters...\nwhat's their\nname again?" -> "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." [xlabel="2"]
+    "Springvale's\nquite a\ndistance away...\nWhat is it\nyou're hunting\nout here?" -> "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." [xlabel="2"]    
+    "You're dressed\na bit like a\nTreasure Hoarders..." -> "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." [xlabel="3"]
+    
+    "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." -> "...No problem,\nSee what you\ncan find,\nI'll take\ncare of him" [xlabel="6"]
+    "Well then,\nlet's head to\nSpringvale\nand see if\nwe can't\nfind out your\nidentity..." -> "Hold on, Barbara.\nHe's a suspicious\ncharacter,\nwe should\ntake him to see\nthe Knights first" [xlabel="6"]
+    
+    "...No problem,\nSee what you\ncan find,\nI'll take\ncare of him" -> "I'll go with you,\nthis fellow could\ndo with some\nmonster-hiding\npractice" [xlabel="2"]
+    "...No problem,\nSee what you\ncan find,\nI'll take\ncare of him" -> "It's too dangerous\nto go alone,\nlet's go together.\nThis fellow should\nbe able to look\nafter himself" [xlabel="2"]
+    
+    "I'll go with you,\nthis fellow could\ndo with some\nmonster-hiding\npractice" -> "LOOK FOR\nFRESH SMALL\nLAMP GRASS" [xlabel="4"]
+    "It's too dangerous\nto go alone,\nlet's go together.\nThis fellow should\nbe able to look\nafter himself" -> "LOOK FOR\nFRESH SMALL\nLAMP GRASS" [xlabel="4"]
+    
+    "LOOK FOR\nFRESH SMALL\nLAMP GRASS" -> "ACCOMPANY\nBARBARA\nWHILE SHE\nHEALS UWE" [xlabel="0"]
+    
+    "ACCOMPANY\nBARBARA\nWHILE SHE\nHEALS UWE" -> "No sudden\nmoves" [xlabel="2"]
+    "ACCOMPANY\nBARBARA\nWHILE SHE\nHEALS UWE" -> "I'm\nwatching\nyou" [xlabel="2"]
+    
+    "No sudden\nmoves" -> "RETURN TO\nMONDSTADT\nWITH\nBARBARA" [xlabel="28"]
+    "I'm\nwatching\nyou" -> "RETURN TO\nMONDSTADT\nWITH\nBARBARA" [xlabel="28"]
+    
+    "RETURN TO\nMONDSTADT\nWITH\nBARBARA" -> "Why did you choose\nto heal that guy\neven though you\nknew he was\nsuspicious?" [xlabel="1"]
+    
+    "Why did you choose\nto heal that guy\neven though you\nknew he was\nsuspicious?" -> "And if I\nhadn't been\nthere...?" [xlabel="3"]
+    "Why did you choose\nto heal that guy\neven though you\nknew he was\nsuspicious?" -> "What if\nyou'd been \non you own?" [xlabel="3"]
+        
+    "And if I\nhadn't been\nthere...?" -> "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA" [xlabel="8"]
+    "What if\nyou'd been \non you own?" -> "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA" [xlabel="8"]
+    
+    
+    "Hold on, Barbara.\nHe's a suspicious\ncharacter,\nwe should\ntake him to see\nthe Knights first" -> "Sir, stop\nwhere you are" [xlabel="3"]
+    "Sir, stop\nwhere you are" -> "We just want\nto get you healed\nat the Church\nis all. What's\nthe matter, shy?" [xlabel="1"]
+    "We just want\nto get you healed\nat the Church\nis all. What's\nthe matter, shy?" -> "I'm just a\nhumble Honorary\nKnight, no need\nto get excited...\nTake a walk\nwith me" [xlabel="1"]
+    "I'm just a\nhumble Honorary\nKnight, no need\nto get excited...\nTake a walk\nwith me" -> "DEFEAT\nTHE\nTREASURE\nHOARDER" [xlabel="1"]
+    "DEFEAT\nTHE\nTREASURE\nHOARDER" -> "That's the last\nwe'll see of him!\nWhatever he was\nplanning, he won't\ntry it now..." [xlabel="1"]
+    "That's the last\nwe'll see of him!\nWhatever he was\nplanning, he won't\ntry it now..." -> "You don't\nsound too happy\nabout it..." [xlabel="1"]
+    "You don't\nsound too happy\nabout it..." -> "Incompletely Cured" [xlabel="6"]
+
+
+
+    //legend
+    "checkpoint" [color=cyan]
+    //"unexplored" [color=red]
+    "ending" [color=green]
+    "keypoint" [color=orange]
+    "heart" [color=purple]
+
+
+
+    //checkpoints
+    // cpX [shape=star, label="cpx", color=cyan]
+    // cpX -> "ydialog"
+    cp1 [shape=star, label="Sister\nVictoria's\nVexation", color=cyan]
+    cp1 -> "TALK TO\nSISTER\nVICTORIA 1"
+    cp2 [shape=star, label="Temporary\nRelief\nFrom the\nFanfare", color=cyan]
+    cp2 -> "FOLLOW\nBARBARA 1"
+    cp3 [shape=star, label="Home-Made\nChilibrew", color=cyan]
+    cp3 -> "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA"
+    cp4 [shape=star, label="Knight and\nDeaconess,\nReady for\nBattle!", color=cyan]
+    cp4 -> "DEFEAT\nTHE\nTREASURE\nHOARDERS"
+    cp5 [shape=star, label="A\nSpicy\nBrew", color=cyan]
+    cp5 -> "TALK TO\nBARBARA 2"
+    cp6 [shape=star, label="A\nMEETING\nMYSTERIOUSLY\nMISSED", color=cyan]
+    cp6 -> "SEARCH\nFOR\nBARBARA"
+    cp7 [shape=star, label="BARBARA'S\nHOME-MADE\nCHILIBREW", color=cyan]
+    cp7 -> "HEAD\nNEAR\nSTONE\nGATE"
+    cp8 [shape=star, label="Deaconess's\nGratitude", color=cyan]
+    cp8 -> "REPORT\nBACK TO\nSISTER\nVICTORIA 2"
+    cp9 [shape=star, label="Deaconess's\n Time Off", color=cyan]
+    cp9 -> "FOLLOW\nBARBARA 2"
+    cp10 [shape=star, label="The Cat's\nTail's\nSpecialty", color=cyan]
+    cp10 -> "LOOK FOR\nBARBARA\nAROUND THE\nCAT'S TAILS"
+    cp11 [shape=star, label="Ulterior\nMotive...?", color=cyan]
+    cp11 -> "DEFEAT\nTHE\nTREASURE\nHOARDER"
+    cp12 [shape=star, label="The\nSecond\nChilibrew\nIngredient", color=cyan]
+    cp12 -> "LOOK FOR\nHIGH\n-QUALITY\nSWEET\nFLOWERS"
+    cp13 [shape=star, label="Healing\nIs My\nJob", color=cyan]
+    cp13 -> "LOOK FOR\nFRESH SMALL\nLAMP GRASS"
+    cp14 [shape=star, label="Cleanliness\nFirst", color=cyan]
+    cp14 -> "REPORT\nBACK TO\nSISTER\nVICTORIA 1"
+    cp15 [shape=star, label="The\nChurch's\nAffairs", color=cyan]
+    cp15 -> "LEAVE\nWOLVENDOM\nWITH\nBARBARA"
+    cp16 [shape=star, label="Of\nWolfhooks\nRed", color=cyan]
+    cp16 -> "SEARCH\nFOR RED\nWOLFHOOKS"
+    cp17 [shape=star, label="Sudden\nShouting", color=cyan]
+    cp17 -> "LOOK FOR\nTHE PERSON\nCALLING\nFOR\nBARBARA"
+    cp18 [shape=star, label="Albert\nNever\nGives Up", color=cyan]
+    cp18 -> "FOLLOW\nALBERT"
+    cp19 [shape=star, label="Alber Is\nAmenabe\nto Reason", color=cyan]
+    cp19 -> "REPORT\nBACK TO\nBARBARA"
+    
+
+
+    //key points
+    // keyxstart [label="key point\n(start)", shape=house, color=orange]
+    // keyxend [label="key point\n(end)", shape=house, color=orange]
+    // "xx" [fontcolor=orange]
+    
+    key1start [label="key point\n(start)", shape=house, color=orange]
+    key1end [label="key point\n(end)", shape=house, color=orange]
+    
+    key2start [label="key point\n(start)", shape=house, color=orange]
+    key2end [label="key point\n(end)", shape=house, color=orange]
+    "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" [fontcolor=orange]
+    "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" [fontcolor=orange]
+    "Barbara's working\nright now,\nplease don't\ndisturb her" [fontcolor=orange]
+
+
+
+    //event
+    // "xx" [shape=circle]
+    "TALK TO\nSISTER\nVICTORIA 1" [shape=circle]
+    "SEARCH\nFOR\nBARBARA 1" [shape=circle]
+    "FOLLOW\nBARBARA 1" [shape=circle]
+    "SEARCH\nFOR RED\nWOLFHOOKS" [shape=circle]
+    "SEARCH\nFOR\nBARBARA 2" [shape=circle]
+    "LEAVE\nWOLVENDOM\nWITH\nBARBARA" [shape=circle]
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 1" [shape=circle]
+    "CLEAN THE\nCATHEDRAL\nGROUNDS" [shape=circle]
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 2" [shape=circle]
+    "TALK TO\nSISTER\nVICTORIA 2" [shape=circle]
+    "HEAD\nNEAR\nSTONE\nGATE" [shape=circle]
+    "MEET\nBARBARA\nIN THE\nWHISPERING\nWOODS" [shape=circle]
+    "SEARCH\nFOR\nBARBARA" [shape=circle]
+    "TALK TO\nBARBARA 1" [shape=circle]
+    "DEFEAT\nTHE\nTREASURE\nHOARDERS" [shape=circle]
+    "HEAD TO\nTHE GARDEN\nNEAR THE\nADVENTURERS'\nGUILD AND\nWAIT FOR\nBARBARA" [shape=circle]
+    "TALK TO\nBARBARA 2" [shape=circle]
+    "TALK TO\nSISTER\nVICTORIA 3" [shape=circle]
+    "LOOK FOR\nBARBARA\nAROUND THE\nCAT'S TAILS" [shape=circle]
+    "PERSUADE\nSUSIE" [shape=circle]
+    "PERSUADE\nHERMANN" [shape=circle]
+    "PERSUADE\nSCHULZ" [shape=circle]
+    "TALK TO\nBARBARA 3" [shape=circle]
+    "FOLLOW\nBARBARA 2" [shape=circle]
+    "TALK TO\nSISTER\nVICTORIA 4" [shape=circle]
+    "LOOK FOR\nHIGH\n-QUALITY\nSWEET\nFLOWERS" [shape=circle]
+    "DEFEAT\nTHE\nTREASURE\nHOARDER" [shape=circle]
+    "LOOK FOR\nFRESH SMALL\nLAMP GRASS" [shape=circle]
+    "ACCOMPANY\nBARBARA\nWHILE SHE\nHEALS UWE" [shape=circle]
+    "RETURN TO\nMONDSTADT\nWITH\nBARBARA" [shape=circle]
+    "LOOK FOR\nTHE PERSON\nCALLING\nFOR\nBARBARA" [shape=circle]
+    "CONVINCE\nALBERT\nTO\nLEAVE" [shape=circle]
+    "FOLLOW\nALBERT" [shape=circle]
+    "TALK TO\nALBERT" [shape=circle]
+    "REPORT\nBACK TO\nBARBARA" [shape=circle]
+
+
+
+    //dots
+    // dotx [shape=point]
+    // "text1" -> dotx [xlabel="?", arrowhead=none] //type this on the link's list
+    // dotx -> "text2"
+    // dotx -> "text3"
+    dot1 [shape=point]
+    dot1 -> "And that\ndidn't... affect\nyour voice ?"
+    dot1 -> "Sounds bad\nfor singing..."
+    dot2 [shape=point]
+    dot2 -> "I guess that's\nwhat \"hard work\"\ntastes like..."
+    dot2 -> "Sounds like\nthis bottle\nof Chilibrew\nis a reflection\nof your\ndetermination"
+    dot3 [shape=point]
+    dot3 -> "It's..\nsomething new..."
+    dot3 -> "*coughing*"
+    dot4 [shape=point]
+    dot4 -> "That was risky,\nwhat if you'd\nbeen discovered?"
+    dot4 -> "Best to go\nback and get\nthe Knights of\nFavonius involved"
+    dot5 [shape=point]
+    dot5 -> "Say no more,\nI'm sure these\nTreasure Hoarders\nwill respond well\nto a little \"direct\nintervention\""
+    dot5 -> "I try to\nrefrain from\nintervening too\ndirectly whenever\npossible..."
+    dot6 [shape=point]
+    dot6 -> "I'll lend\nyou a hand"
+    dot6 -> "We can\ngo look\ntogether"
+    dot8 [shape=point]
+    dot8 -> "I think you've\nalready searched\nmost of the\nareas where red\nWolfhooks grow" [xlabel="1"]
+    dot8 -> "There might be\nsome other areas\nwhere Wolfhooks\ngrow that you\nhaven't heard\nabout, perhaps Barbara\nwent somewhere else?" [xlabel="1"]
+    dot8 -> "How can you be\ncertain that she's\nout picking Wolfhooks?\nShe might not\neven be anywhere\nnearby here" [xlabel="1"]
+    dot9 [shape=point]
+    dot9 -> "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" [xlabel="1"]
+    dot9 -> "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" [xlabel="1"]
+    dot9 -> "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago" [xlabel="1"]
+    
+    
+
+    //heart gain/lose
+    // "xdialog" [xlabel="-1", color=purple]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" [xlabel="-1", color=purple]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" [xlabel="-1", color=purple]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" [xlabel="-1", color=purple]
+    "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..." [xlabel="-1", color=purple]
+
+
+
+    //ending
+    // "xx" [color=green]
+    "A Fiery\nFlavor\nFrom\nLiyue" [color=green]
+    "The Taste\nof\nHard Work" [color=green]
+    "A\nHoliday\nin\nMondstadt" [color=green]
+    "Incompletely Cured" [color=green]
+    "Untimely\nEnthusiasm" [color=green]
+
+
+
+    //duplicata
+    // "xx 1" [label="xx"]
+    "SEARCH\nFOR\nBARBARA 1" [label="SEARCH\nFOR\nBARBARA"]
+    "SEARCH\nFOR\nBARBARA 2" [label="SEARCH\nFOR\nBARBARA"]
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 1" [label="REPORT\nBACK TO\nSISTER\nVICTORIA"]
+    "REPORT\nBACK TO\nSISTER\nVICTORIA 2" [label="REPORT\nBACK TO\nSISTER\nVICTORIA"]
+    "TALK TO\nSISTER\nVICTORIA 1" [label="TALK TO\nSISTER\nVICTORIA"]
+    "TALK TO\nSISTER\nVICTORIA 2" [label="TALK TO\nSISTER\nVICTORIA"]
+    "TALK TO\nSISTER\nVICTORIA 3" [label="TALK TO\nSISTER\nVICTORIA"]
+    "TALK TO\nSISTER\nVICTORIA 4" [label="TALK TO\nSISTER\nVICTORIA"]
+    "TALK TO\nBARBARA 1" [label="TALK TO\nBARBARA"]
+    "TALK TO\nBARBARA 2" [label="TALK TO\nBARBARA"]
+    "TALK TO\nBARBARA 3" [label="TALK TO\nBARBARA"]
+    "Why does Barbara\nalways have to\nreport her plans? 1" [label="Why does Barbara\nalways have to\nreport her plans?"]
+    "Why does Barbara\nalways have to\nreport her plans? 2" [label="Why does Barbara\nalways have to\nreport her plans?"]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" [label="Please don't\ndisturb her,\nBarbara's\ncurrently\non leave"]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" [label="Please don't\ndisturb her,\nBarbara's\ncurrently\non leave"]
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" [label="Please don't\ndisturb her,\nBarbara's\ncurrently\non leave"]
+    "FOLLOW\nBARBARA 1" [label="FOLLOW\nBARBARA"]
+    "FOLLOW\nBARBARA 2" [label="FOLLOW\nBARBARA"]
+    "Why are you\ntrying to avoid\nbeing seen? 1" [label="Why are you\ntrying to avoid\nbeing seen?"]
+    "Why are you\ntrying to avoid\nbeing seen? 2" [label="Why are you\ntrying to avoid\nbeing seen?"]
+    "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 1" [label="If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby"]
+    "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 2" [label="If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby"]
+    
+
+
+    //special
+    // "<FAIL>" [shape=doublecircle]
+    // "<SUCCESS>" [shape=doublecircle]
+    "<FAIL> 1" [shape=doublecircle, label="<FAIL>"]
+    "<FAIL> 2" [shape=doublecircle, label="<FAIL>"]
+    "<FAIL> 3" [shape=doublecircle, label="<FAIL>"]
+    
+    "SUCCEED\nTO\nPERSUADE\nALL" [shape=doublecircle]
+    "FAILED\nTO\nPERSUADE\nALL" [shape=doublecircle]
+
+
+}
