@@ -70,4 +70,15 @@ digraph G {
     // "<SUCCESS>" [shape=doublecircle]
 
 
+
+    //force alignment
+    //force vertical alignment
+    //{ rank=same
+    //    "XXX"
+    //    "YYY"
+    //}
+    //use with alignment to force vertical order
+    //"XXX" -> "YYY" [style=invis] //invisible arrow
+    
+    
 }
