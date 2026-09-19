@@ -17,24 +17,24 @@ digraph G {
     // beautify = false
 
 
-    //pour parametrer la flêche il faut utiliser les crochets [] APRÈS un lien
+    //so modify the arrow, use settings in [] after the link
 
 
     a [label="a", shape="square", color="blue", area="1.0"]
 	a -> b
 	c -> d [arrowhead="open"] //normal, inv, dot, invdot, odot, invodot, none, tee, empty, invempty, diamond, odiamond, ediamond, crow, box, obox, open, halfopen, vee
-    e -> f [arrowsize="3"] //multiplie la taille de la tête
-    g -> h [arrowtail="diamond"]
+    e -> f [arrowsize="3"] //size of the arrow head
+    g -> h [arrowtail="diamond"] //shape of the arrow tail
 
 
     1 -> 2
     2 -> 3
     3 -> 1
 
-    // N0 -> {N1; N2; N3; N4; N5; N6}
+    N0 -> {N1; N2; N3; N4; N5; N6}
 
-    // v -> w[color="green", label=5]
-    // x -> y[area="3.0"]
+    v -> w[color="green", label=5]
+    x -> y[area="3.0"]
 }
 
 
