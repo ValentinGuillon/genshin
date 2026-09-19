@@ -396,6 +396,13 @@ digraph G {
     
     key1start [label="key point\n(start)", shape=house, color=orange]
     key1end [label="key point\n(end)", shape=house, color=orange]
+    "Barbara isn't\nhere anymore,\nyou'd better\nhead back\nto the city" [fontcolor=red]
+    "Wolvendom is a large area,\nit would be difficult for\nyou to cover it alone.\nYou should find some others\nto help you search first" [fontcolor=green]
+    "I think you've\nalready searched\nmost of the\nareas where red\nWolfhooks grow" [fontcolor=green]
+    "There might be\nsome other areas\nwhere Wolfhooks\ngrow that you\nhaven't heard\nabout, perhaps Barbara\nwent somewhere else?" [fontcolor=red]
+    "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" [fontcolor=red]
+    "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" [fontcolor=red]
+    "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago" [fontcolor=green]
     
     key2start [label="key point\n(start)", shape=house, color=orange]
     key2end [label="key point\n(end)", shape=house, color=orange]
