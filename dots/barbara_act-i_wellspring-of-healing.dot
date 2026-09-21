@@ -51,7 +51,7 @@ digraph G {
     "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" -> key1end [xlabel="3", arrowhead=none, color=red]
     "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago" -> "Of\ncourse\nnot" [xlabel="2", color=green]
 
-    "Of\ncourse\nnot" -> key1end [xlabel="1", arrowhead=none]
+    "Of\ncourse\nnot" -> key1end [xlabel="1", arrowhead=none, color=green]
     
     key1end -> "FOLLOW\nALBERT" [xlabel="2", color=red]
     key1end -> "REPORT\nBACK TO\nBARBARA" [xlabel="4", color=green]
@@ -76,7 +76,6 @@ digraph G {
     "Are these the\nkind of Wolfhook\nyou're looking for?" -> "But no one\neven knows about\nthis matter..." [xlabel="6"]
     "But no one\neven knows about\nthis matter..." -> "LEAVE\nWOLVENDOM\nWITH\nBARBARA" [xlabel="3"]
     
-
     "Let's go deeper\ninto the forest\nand wait for\nthem to leave" -> "FOLLOW\nBARBARA 1" [xlabel="1"]
     "FOLLOW\nBARBARA 1" -> "Why are you\ntrying to avoid\nbeing seen? 2" [xlabel="2"]
     "Why are you\ntrying to avoid\nbeing seen? 2" -> "If you're looking\nfor Wolfhooks,\nthere should be\nplenty nearby 2" [xlabel="11"]
@@ -89,7 +88,6 @@ digraph G {
     "It's alright, this\nis a perfect place\nfor two people\nto spend some\ntime together" -> "<FAIL> 1" [xlabel="1"]
 
     "So what made you\ndecide to join\nthe Church, Barbara?" -> "Does that mean\nI can come\nto you when\ni need healing,\ntoo?" [xlabel="8"]
-    
     "Does that mean\nI can come\nto you when\ni need healing,\ntoo?" -> dot6 [xlabel="3", arrowhead=none]
     
     "Wouldn't your\nfamily worry about\nyou picking herbs\nall alone?" -> "Ah yes, Grand\nMaster Varka. I\nremember he's..." [xlabel="3"]
@@ -119,7 +117,6 @@ digraph G {
     
     "Perhaps it'd\nbe better for\nyou to tell her\nyourself..." -> "<FAIL> 3" [xlabel="1"]
     
-    
     "Leave it\nto us!" -> "REPORT\nBACK TO\nSISTER\nVICTORIA 1" [xlabel="1"]
     
     "REPORT\nBACK TO\nSISTER\nVICTORIA 1" -> "We found\nBarbara\nin Wolvendom" [xlabel="1"]
@@ -146,7 +143,6 @@ digraph G {
     "LOOK FOR\nBARBARA\nAROUND THE\nCAT'S TAILS" -> "(Looks like\nwe might\nneed to\nintervene...)" [xlabel="13"]
     "(Looks like\nwe might\nneed to\nintervene...)" -> "(Barbara needs\nrescuing from\nthe crowd...)"
     "(Barbara needs\nrescuing from\nthe crowd...)" -> key2start
-    
     key2start -> "PERSUADE\nSUSIE"
     
     "PERSUADE\nSUSIE" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" [xlabel="1"]
@@ -155,8 +151,8 @@ digraph G {
     "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" -> "(Darn...)" [xlabel="2"]
     "(Darn...)" -> "PERSUADE\nHERMANN"
     
-    "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" -> "Uh -- we're...\non official\nbusiness" [xlabel="1"]
-    "Uh -- we're...\non official\nbusiness" -> "PERSUADE\nHERMANN" [xlabel="3"]
+    "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" -> "Uh -- we're...\non official\nbusiness" [xlabel="1", color=orange]
+    "Uh -- we're...\non official\nbusiness" -> "PERSUADE\nHERMANN" [xlabel="3", color=orange]
     
     "PERSUADE\nHERMANN" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" [xlabel="1"]
     "PERSUADE\nHERMANN" -> "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" [xlabel="1"]
@@ -164,8 +160,8 @@ digraph G {
     "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" -> "(Uh oh...)" [xlabel="2"]
     "(Uh oh...)" -> "PERSUADE\nSCHULZ"
     
-    "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" -> "Barbara is on\nofficial business\nright now" [xlabel="1"]
-    "Barbara is on\nofficial business\nright now" -> "PERSUADE\nSCHULZ" [xlabel="1"]
+    "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" -> "Barbara is on\nofficial business\nright now" [xlabel="1", color=orange]
+    "Barbara is on\nofficial business\nright now" -> "PERSUADE\nSCHULZ" [xlabel="1", color=orange]
     
     "PERSUADE\nSCHULZ" -> "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" [xlabel="1"]
     "PERSUADE\nSCHULZ" -> "Barbara's working\nright now,\nplease don't\ndisturb her" [xlabel="1"]
@@ -173,20 +169,17 @@ digraph G {
     "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" -> "(This is bad...)" [xlabel="2"]
     "(This is bad...)" -> key2end
     
-    "Barbara's working\nright now,\nplease don't\ndisturb her" -> "We're... on\nofficial business" [xlabel="1"]
-    "We're... on\nofficial business" -> key2end [xlabel="1"]
+    "Barbara's working\nright now,\nplease don't\ndisturb her" -> "We're... on\nofficial business" [xlabel="1", color=orange]
+    "We're... on\nofficial business" -> key2end [xlabel="1", color=orange]
     
     key2end -> "TALK TO\nBARBARA 3"
     
-    "TALK TO\nBARBARA 3" -> "SUCCEED\nTO\nPERSUADE\nALL" [color=orange]
-    "TALK TO\nBARBARA 3" -> "FAILED\nTO\nPERSUADE\nALL"
-    
-    "SUCCEED\nTO\nPERSUADE\nALL" -> "They came to\ntheir senses\nonce I'd given\nthem the lowdown" [xlabel="1"]
-    "SUCCEED\nTO\nPERSUADE\nALL" -> "I temporarily\npersuaded them\nto beat it" [xlabel="1"]
-    "FAILED\nTO\nPERSUADE\nALL" -> "They're gonna\nkeep asking for\nmore and more..." [xlabel="10"]
+    "TALK TO\nBARBARA 3" -> "They came to\ntheir senses\nonce I'd given\nthem the lowdown" [xlabel="1", color=orange]
+    "TALK TO\nBARBARA 3" -> "I temporarily\npersuaded them\nto beat it" [xlabel="1", color=orange]
+    "TALK TO\nBARBARA 3" -> "They're gonna\nkeep asking for\nmore and more..." [xlabel="10"]
 
-    "I temporarily\npersuaded them\nto beat it" -> "FOLLOW\nBARBARA 2" [xlabel="6"]
     "They came to\ntheir senses\nonce I'd given\nthem the lowdown" -> "FOLLOW\nBARBARA 2" [xlabel="6"]
+    "I temporarily\npersuaded them\nto beat it" -> "FOLLOW\nBARBARA 2" [xlabel="6"]
 
     "They're gonna\nkeep asking for\nmore and more..." -> "I've waited\nlonger..." [xlabel="2"]
     
@@ -256,11 +249,11 @@ digraph G {
     "DEFEAT\nTHE\nTREASURE\nHOARDERS" -> "Well, we\nwere looking\nfor Sweet\nFlowers..." [xlabel="16"]
     
     "TALK TO\nBARBARA 2" -> dot3 [xlabel="6", arrowhead=none]
-    
     "I'd like to\ntry that Liyue\nChilibrew" -> dot3 [xlabel="9", arrowhead=none]
     
     "It's..\nsomething new..." -> "A Fiery\nFlavor\nFrom\nLiyue" [xlabel="5"]
     "*coughing*" -> "A Fiery\nFlavor\nFrom\nLiyue" [xlabel="5"]
+    
     
     "Let's go\nfor Mora" -> "<FAIL> 2" [xlabel="5"]
     
@@ -538,9 +531,120 @@ digraph G {
     "<FAIL> 1" [shape=doublecircle, label="<FAIL>"]
     "<FAIL> 2" [shape=doublecircle, label="<FAIL>"]
     "<FAIL> 3" [shape=doublecircle, label="<FAIL>"]
-    
-    "SUCCEED\nTO\nPERSUADE\nALL" [shape=doublecircle]
-    "FAILED\nTO\nPERSUADE\nALL" [shape=doublecircle]
 
+
+
+    //force alignment
+    //force vertical alignment
+    //{ rank=same
+    //    "XXX"
+    //    "YYY"
+    //}
+    //use with alignment to force vertical order
+    //"XXX" -> "YYY" [style=invis] //invisible arrow
+    { rank=same
+        "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves"
+        "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything"
+        "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago"
+    }
+    "There are all\nsorts of monsters\nin Wolvendom,\nand not to\nmention wolves" -> "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" [style=invis] //invisible arrow
+    "I've been here\nclearing the area\nof monsters all day,\nbut I didn't\nhear anything" -> "But do you still\nhear her now?\nBarbara-sama may\nhave already left\nthe area a while ago" [style=invis] //invisible arrow
+    { rank=same
+        "It's alright, this\nis a perfect place\nfor two people\nto spend some\ntime together"
+        "So what made you\ndecide to join\nthe Church, Barbara?"
+        "Wouldn't your\nfamily worry about\nyou picking herbs\nall alone?"
+    }
+    "It's alright, this\nis a perfect place\nfor two people\nto spend some\ntime together" -> "So what made you\ndecide to join\nthe Church, Barbara?" [style=invis] //invisible arrow
+    "So what made you\ndecide to join\nthe Church, Barbara?" -> "Wouldn't your\nfamily worry about\nyou picking herbs\nall alone?" [style=invis] //invisible arrow
+    { rank=same
+        "(Look at Barbara\nwith an\ninnocent gaze)"
+        "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..."
+    }
+    "(Look at Barbara\nwith an\ninnocent gaze)" -> "Th-The Holy\nLyre? Oh...\nUm, I wouldn't\nknow..." [style=invis] //invisible arrow
+    { rank=same
+        "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1"
+        "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others"
+    }
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 1" -> "If it's Barbara's\nstyle you're\nafter, you could\nstart by being\nconsiderate to others" [style=invis] //invisible arrow
+    { rank=same
+        "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2"
+        "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--"
+    }
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 2" -> "You won't mind\nif I check with\nEllin on that?\nLooks like\nshe's training,\nright over th--" [style=invis] //invisible arrow
+    { rank=same
+        "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3"
+        "Barbara's working\nright now,\nplease don't\ndisturb her"
+    }
+    "Please don't\ndisturb her,\nBarbara's\ncurrently\non leave 3" -> "Barbara's working\nright now,\nplease don't\ndisturb her" [style=invis] //invisible arrow
+    { rank=same
+        "They came to\ntheir senses\nonce I'd given\nthem the lowdown"
+        "I temporarily\npersuaded them\nto beat it"
+        "They're gonna\nkeep asking for\nmore and more..."
+    }
+    "They came to\ntheir senses\nonce I'd given\nthem the lowdown" -> "I temporarily\npersuaded them\nto beat it" [style=invis] //invisible arrow
+    "I temporarily\npersuaded them\nto beat it" -> "They're gonna\nkeep asking for\nmore and more..." [style=invis] //invisible arrow
+    { rank=same
+        "Just now, in\nthe city... why\ndidn't you just\ntell them you\nwere on leave\nand walk away ?"
+        "That sudden crowd\nback there in\nthe city...\nyou must be\nexhausted"
+        "What's the\nBarbara Fan\nClub?"
+        "I get the\nfeeling you're\nmore popular\nthan the\naverage sister..."
+    }
+    "Just now, in\nthe city... why\ndidn't you just\ntell them you\nwere on leave\nand walk away ?" -> "That sudden crowd\nback there in\nthe city...\nyou must be\nexhausted" [style=invis] //invisible arrow
+    "That sudden crowd\nback there in\nthe city...\nyou must be\nexhausted" -> "What's the\nBarbara Fan\nClub?" [style=invis] //invisible arrow
+    "What's the\nBarbara Fan\nClub?" -> "I get the\nfeeling you're\nmore popular\nthan the\naverage sister..." [style=invis] //invisible arrow
+    { rank=same
+        "Why, sure\nyou are"
+        "You're already\na very gifted\nhealer"
+    }
+    "Why, sure\nyou are" -> "You're already\na very gifted\nhealer" [style=invis] //invisible arrow
+    { rank=same
+        "We tought\nsomething might\nhave happened,\nso we came\nlooking for you"
+        "What are you\ndoing here?"
+    }
+    "We tought\nsomething might\nhave happened,\nso we came\nlooking for you" -> "What are you\ndoing here?" [style=invis] //invisible arrow
+    { rank=same
+        "Say no more,\nI'm sure these\nTreasure Hoarders\nwill respond well\nto a little \"direct\nintervention\""
+        "I try to\nrefrain from\nintervening too\ndirectly whenever\npossible..."
+    }
+    "Say no more,\nI'm sure these\nTreasure Hoarders\nwill respond well\nto a little \"direct\nintervention\"" -> "I try to\nrefrain from\nintervening too\ndirectly whenever\npossible..." [style=invis] //invisible arrow
+    { rank=same   
+        "You're not...\ndressed like\na hunter"
+        "The leader of\nthe Springvale\nhunters...\nwhat's their\nname again?"
+        "Springvale's\nquite a\ndistance away...\nWhat is it\nyou're hunting\nout here?"
+        "You're dressed\na bit like a\nTreasure Hoarders..."
+    }
+    "You're not...\ndressed like\na hunter" -> "The leader of\nthe Springvale\nhunters...\nwhat's their\nname again?" [style=invis] //invisible arrow
+    "The leader of\nthe Springvale\nhunters...\nwhat's their\nname again?" -> "Springvale's\nquite a\ndistance away...\nWhat is it\nyou're hunting\nout here?" [style=invis] //invisible arrow
+    "Springvale's\nquite a\ndistance away...\nWhat is it\nyou're hunting\nout here?" -> "You're dressed\na bit like a\nTreasure Hoarders..." [style=invis] //invisible arrow
+    { rank=same   
+        "No sudden\nmoves"
+        "I'm\nwatching\nyou"
+    }
+    "No sudden\nmoves" -> "I'm\nwatching\nyou" [style=invis] //invisible arrow
+    { rank=same   
+        cp17
+        "Just wait here,\nwe'll go send\nthat person away"
+    }
+    cp17 -> "Just wait here,\nwe'll go send\nthat person away" [style=invis] //invisible arrow
+    { rank=same   
+        "Leave it\nto us!"
+        cp14
+    }
+    "Leave it\nto us!" -> cp14 [style=invis] //invisible arrow
+    { rank=same   
+        cp13
+        "I'll go with you,\nthis fellow could\ndo with some\nmonster-hiding\npractice"
+        "It's too dangerous\nto go alone,\nlet's go together.\nThis fellow should\nbe able to look\nafter himself"
+    }
+    cp13 -> "I'll go with you,\nthis fellow could\ndo with some\nmonster-hiding\npractice" [style=invis] //invisible arrow
+    "I'll go with you,\nthis fellow could\ndo with some\nmonster-hiding\npractice" -> "It's too dangerous\nto go alone,\nlet's go together.\nThis fellow should\nbe able to look\nafter himself" [style=invis] //invisible arrow
+    { rank=same   
+        "And if I\nhadn't been\nthere...?"
+        "What if\nyou'd been \non you own?"
+        cp3
+    }
+    "And if I\nhadn't been\nthere...?" -> "What if\nyou'd been \non you own?" [style=invis] //invisible arrow
+    "What if\nyou'd been \non you own?" -> cp3 [style=invis] //invisible arrow
+    
 
 }
