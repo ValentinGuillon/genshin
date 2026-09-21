@@ -1,0 +1,84 @@
+
+digraph G {
+    rankdir=LR
+    node [style=filled, shape=rect]
+    // node [label="***"] //censure lol
+
+
+
+    //links
+    "GO TO THE\nFRONT DESK\nOF THE\nADVENTURER'S\nGUILD" -> ""  [xlabel="X"]
+
+
+
+    //legend
+    "checkpoint" [color=cyan]
+    "unexplored" [color=red]
+    "ending" [color=green]
+    "keypoint" [color=orange]
+    "heart" [color=purple]
+
+
+
+    //checkpoints
+    // cpX [shape=star, label="cpx", color=cyan]
+    // cpX -> "ydialog"
+
+    cp1 [shape=star, label="Starting", color=cyan]
+    cp1 -> "GO TO THE\nFRONT DESK\nOF THE\nADVENTURER'S\nGUILD"
+    
+
+
+    //key points
+    // keyxstart [label="key point\n(start)", shape=house, color=orange]
+    // keyxend [label="key point\n(end)", shape=house, color=orange]
+    // "xx" [fontcolor=orange]
+
+
+
+    //event
+    // "xx" [shape=circle]
+    "GO TO THE\nFRONT DESK\nOF THE\nADVENTURER'S\nGUILD" [shape=circle]
+
+
+
+    //dots
+    // dotx [shape=point]
+    // "text1" -> dotx [xlabel="?", arrowhead=none] //type this on the link's list
+    // dotx -> "text2"
+    // dotx -> "text3"
+
+
+
+    //heart gain/lose
+    // "xdialog" [xlabel="-1", color=purple]
+
+
+
+    //ending
+    // "xx" [color=green]
+
+
+
+    //duplicata
+    // "xx 1" [label="xx"]
+
+
+
+    //special
+    // "<FAIL>" [shape=doublecircle]
+    // "<SUCCESS>" [shape=doublecircle]
+
+
+
+    //force alignment
+    //force vertical alignment
+    //{ rank=same
+    //    "XXX"
+    //    "YYY"
+    //}
+    //use with alignment to force vertical order
+    //"XXX" -> "YYY" [style=invis] //invisible arrow
+    
+    
+}
